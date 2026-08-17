@@ -4,6 +4,7 @@ import '../domain/pesanan_model.dart';
 import '../../produk/domain/produk_model.dart';
 import '../../meja/domain/meja_model.dart';
 import '../../kafe/presentation/active_cafe_provider.dart';
+import '../../dashboard/presentation/dashboard_provider.dart';
 
 final pesananRepositoryProvider = Provider<PesananRepository>((ref) {
   return PesananRepository();
@@ -144,11 +145,27 @@ class PosCartNotifier extends StateNotifier<PosCartState> {
         );
       }).toList();
 
-      final result = await repo.buatPesananAwalRpc(
-        idKafe: activeCafe.idKafe,
-        idMeja: state.selectedMeja!.idMeja,
-        items: detailItems,
-      );
+      // Cek apakah meja memiliki sesi aktif saat ini
+      final dashboardState = _ref.read(dashboardNotifierProvider);
+      final activeSession = dashboardState.activeSessionsByMejaId[state.selectedMeja!.idMeja];
+
+      Map<String, dynamic> result;
+      if (activeSession != null && activeSession.statusSesi == 'aktif') {
+        // Meja sudah terisi -> Eksekusi Order Tambahan & Perpanjang Sesi secara atomik
+        result = await repo.tambahPesananDanPerpanjangSesiRpc(
+          idKafe: activeCafe.idKafe,
+          idMeja: state.selectedMeja!.idMeja,
+          idSesiMeja: activeSession.idSesiMeja,
+          items: detailItems,
+        );
+      } else {
+        // Meja belum memiliki sesi -> Eksekusi Pesanan Awal & Mulai Sesi secara atomik
+        result = await repo.buatPesananAwalRpc(
+          idKafe: activeCafe.idKafe,
+          idMeja: state.selectedMeja!.idMeja,
+          items: detailItems,
+        );
+      }
 
       resetCart();
       return result;

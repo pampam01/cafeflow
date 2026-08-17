@@ -17,11 +17,15 @@ class StrukPesananDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final isPerpanjangan = rpcResult['is_perpanjangan'] as bool? ?? false;
     final nomorPesanan = rpcResult['nomor_pesanan'] as String? ?? 'CF-000';
     final totalBelanja = rpcResult['total_belanja'] is num
         ? (rpcResult['total_belanja'] as num).toDouble()
         : double.tryParse(rpcResult['total_belanja']?.toString() ?? '0') ?? 0.0;
     final durasiMenit = rpcResult['durasi_menit'] as int? ?? 60;
+    final totalBelanjaSesi = rpcResult['total_belanja_sesi'] is num
+        ? (rpcResult['total_belanja_sesi'] as num).toDouble()
+        : totalBelanja;
     final waktuBerakhir = rpcResult['waktu_berakhir'] != null
         ? DateTime.parse(rpcResult['waktu_berakhir'].toString()).toLocal()
         : DateTime.now().add(Duration(minutes: durasiMenit));
@@ -41,15 +45,19 @@ class StrukPesananDialog extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.green[50],
+                color: isPerpanjangan ? Colors.blue[50] : Colors.green[50],
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.check_circle_rounded, color: Colors.green, size: 40),
+              child: Icon(
+                isPerpanjangan ? Icons.more_time_rounded : Icons.check_circle_rounded,
+                color: isPerpanjangan ? Colors.blue[800] : Colors.green,
+                size: 40,
+              ),
             ),
             const SizedBox(height: 12),
 
             Text(
-              'Pesanan & Sesi Berhasil Dibuat!',
+              isPerpanjangan ? 'Pesanan Tambahan & Perpanjangan Sesi!' : 'Pesanan & Sesi Berhasil Dibuat!',
               textAlign: TextAlign.center,
               style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, fontSize: 18),
             ),
@@ -72,19 +80,31 @@ class StrukPesananDialog extends StatelessWidget {
                 children: [
                   _ReceiptRow(label: 'Nomor Pesanan', value: nomorPesanan, isBold: true),
                   const Divider(height: 16),
-                  _ReceiptRow(label: 'Nomor Meja', value: nomorMeja, isBold: true),
-                  const Divider(height: 16),
-                  _ReceiptRow(label: 'Total Belanja', value: CurrencyFormatter.formatRupiah(totalBelanja), isBold: true),
+                  _ReceiptRow(label: 'Nomor Meja', value: 'Meja $nomorMeja', isBold: true),
                   const Divider(height: 16),
                   _ReceiptRow(
-                    label: 'Comfort Time Diperoleh',
-                    value: '$durasiMenit Menit',
-                    valueColor: theme.colorScheme.primary,
+                    label: isPerpanjangan ? 'Total Pesanan Ini' : 'Total Belanja',
+                    value: CurrencyFormatter.formatRupiah(totalBelanja),
+                    isBold: true,
+                  ),
+                  if (isPerpanjangan) ...[
+                    const SizedBox(height: 6),
+                    _ReceiptRow(
+                      label: 'Akumulasi Belanja Sesi',
+                      value: CurrencyFormatter.formatRupiah(totalBelanjaSesi),
+                      isBold: true,
+                    ),
+                  ],
+                  const Divider(height: 16),
+                  _ReceiptRow(
+                    label: isPerpanjangan ? 'Tambahan Waktu' : 'Comfort Time Diperoleh',
+                    value: '+$durasiMenit Menit',
+                    valueColor: isPerpanjangan ? Colors.blue[900] : theme.colorScheme.primary,
                     isBold: true,
                   ),
                   const SizedBox(height: 6),
                   _ReceiptRow(
-                    label: 'Berakhir Pada Jam',
+                    label: 'Berakhir Baru Pada',
                     value: '$formattedWaktuBerakhir WIB',
                     valueColor: Colors.amber[900],
                     isBold: true,

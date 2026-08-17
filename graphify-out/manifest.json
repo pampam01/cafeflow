@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\full_setup.sql": {
-    "mtime": 1786978654.0368779,
-    "ast_hash": "3535317ef74e0a745ad7620efe2485fa",
+    "mtime": 1786980069.8260853,
+    "ast_hash": "7239f72136f8c11ed8efffc9363cb07a",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\seed.sql": {
@@ -570,8 +570,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\data\\pesanan_repository.dart": {
-    "mtime": 1786977954.668151,
-    "ast_hash": "12ce2d4eaf51a2b6ee2a2c1471882cdc",
+    "mtime": 1786980159.3516161,
+    "ast_hash": "56412b461594be180b0c1e74e012655a",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\domain\\pesanan_model.dart": {
@@ -580,18 +580,18 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\pos_cart_provider.dart": {
-    "mtime": 1786977967.0256586,
-    "ast_hash": "187fa3855861e1bae4ab6ed926f6cc9d",
+    "mtime": 1786980094.5870366,
+    "ast_hash": "86876775bfad5abeb831e09399ece99e",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\dialogs\\buat_pesanan_modal.dart": {
-    "mtime": 1786978465.2619078,
-    "ast_hash": "71e6d0fcc231ea0646d582f04603dbf7",
+    "mtime": 1786980102.896778,
+    "ast_hash": "fb8cbb4391643431eb1f1d7d94c02448",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\dialogs\\struk_pesanan_dialog.dart": {
-    "mtime": 1786978972.4941802,
-    "ast_hash": "fe522f1a3465b850eefada1a77a1c2ca",
+    "mtime": 1786980112.484018,
+    "ast_hash": "66afa6e19646b2e5a8fc7e9b7c5a0436",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\produk\\data\\produk_repository.dart": {
@@ -617,6 +617,11 @@
   "D:\\usaha\\cafeflow\\test\\pesanan_test.dart": {
     "mtime": 1786978007.821392,
     "ast_hash": "1a8ee87a4a3437cb4a69742f91ffd75d",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\comfort_time_engine_test.dart": {
+    "mtime": 1786980117.933299,
+    "ast_hash": "78649c735f582cef2142d4cf97226d05",
     "semantic_hash": ""
   }
 }

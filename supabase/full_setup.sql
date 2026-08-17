@@ -481,10 +481,10 @@ BEGIN
     -- 4. Buat data_sesi_meja
     INSERT INTO data_sesi_meja (
         id_sesi_meja, id_kafe, id_meja, id_pelanggan,
-        waktu_mulai, waktu_berakhir, durasi_awal_menit, total_durasi_menit, status_sesi
+        waktu_mulai, waktu_berakhir, durasi_awal_menit, total_durasi_menit, total_belanja, status_sesi
     ) VALUES (
         v_id_sesi, p_id_kafe, p_id_meja, p_id_pelanggan,
-        v_waktu_mulai, v_waktu_berakhir, v_total_menit, v_total_menit, 'aktif'
+        v_waktu_mulai, v_waktu_berakhir, v_total_menit, v_total_menit, v_total_belanja, 'aktif'
     );
 
     -- 5. Buat data_pesanan
@@ -523,7 +523,153 @@ BEGIN
         'id_sesi_meja', v_id_sesi,
         'total_belanja', v_total_belanja,
         'durasi_menit', v_total_menit,
-        'waktu_berakhir', v_waktu_berakhir
+        'waktu_berakhir', v_waktu_berakhir,
+        'is_perpanjangan', FALSE
+    );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Migrasi Kolom total_belanja pada data_sesi_meja
+ALTER TABLE data_sesi_meja ADD COLUMN IF NOT EXISTS total_belanja NUMERIC(12, 2) NOT NULL DEFAULT 0.00;
+
+-- ====================================================================
+-- FUNGSI ATOMIK PL/PGSQL: tambah_pesanan_dan_perpanjang_sesi
+-- Memproses order tambahan untuk meja terisi & sesi aktif,
+-- menghitung tambahan waktu berdasarkan data_aturan_waktu dinamis,
+-- dan meng-update total_belanja, total_durasi_menit, waktu_berakhir secara atomik.
+-- ====================================================================
+CREATE OR REPLACE FUNCTION public.tambah_pesanan_dan_perpanjang_sesi(
+    p_id_kafe UUID,
+    p_id_meja UUID,
+    p_id_sesi_meja UUID,
+    p_items JSONB
+)
+RETURNS JSONB AS $$
+DECLARE
+    v_id_pesanan UUID := gen_random_uuid();
+    v_nomor_pesanan VARCHAR(50);
+    v_seq INT;
+    v_item JSONB;
+    v_id_produk UUID;
+    v_jumlah INT;
+    v_catatan TEXT;
+    v_harga NUMERIC(12, 2);
+    v_durasi_produk INT;
+    v_subtotal NUMERIC(12, 2);
+    v_total_belanja_tambahan NUMERIC(12, 2) := 0.00;
+    v_tambahan_menit INT := 0;
+    v_rule_menit INT;
+    v_bonus_menit INT := 0;
+    v_sesi RECORD;
+    v_waktu_berakhir_lama TIMESTAMPTZ;
+    v_waktu_berakhir_baru TIMESTAMPTZ;
+    v_now TIMESTAMPTZ := NOW();
+BEGIN
+    -- 1. Ambil data sesi meja aktif
+    SELECT * INTO v_sesi FROM data_sesi_meja 
+    WHERE id_sesi_meja = p_id_sesi_meja AND id_kafe = p_id_kafe
+    FOR UPDATE;
+
+    IF v_sesi.id_sesi_meja IS NULL THEN
+        RAISE EXCEPTION 'Sesi meja % tidak ditemukan pada kafe ini.', p_id_sesi_meja;
+    END IF;
+
+    -- 2. Generate Nomor Pesanan mudah dibaca manusia (Contoh: CF-20260817-0002)
+    SELECT COALESCE(COUNT(*), 0) + 1 INTO v_seq 
+    FROM data_pesanan 
+    WHERE id_kafe = p_id_kafe AND DATE(waktu_pesanan) = CURRENT_DATE;
+    
+    v_nomor_pesanan := 'CF-' || TO_CHAR(CURRENT_DATE, 'YYYYMMDD') || '-' || LPAD(v_seq::TEXT, 4, '0');
+
+    -- 3. Validasi & Kalkulasi Ulang Harga Produk langsung dari DB
+    FOR v_item IN SELECT * FROM jsonb_array_elements(p_items)
+    LOOP
+        v_id_produk := (v_item->>'id_produk')::UUID;
+        v_jumlah := (v_item->>'jumlah')::INT;
+        
+        SELECT harga, durasi_tambahan_menit INTO v_harga, v_durasi_produk 
+        FROM data_produk 
+        WHERE id_produk = v_id_produk AND id_kafe = p_id_kafe AND status_aktif = TRUE;
+
+        IF v_harga IS NULL THEN
+            RAISE EXCEPTION 'Produk % tidak ditemukan atau nonaktif pada kafe ini.', v_id_produk;
+        END IF;
+
+        v_subtotal := v_harga * v_jumlah;
+        v_total_belanja_tambahan := v_total_belanja_tambahan + v_subtotal;
+        v_bonus_menit := v_bonus_menit + (v_durasi_produk * v_jumlah);
+    END LOOP;
+
+    -- 4. Cari aturan waktu Comfort Time berdasarkan total belanja pesanan tambahan ini
+    SELECT durasi_menit INTO v_rule_menit 
+    FROM data_aturan_waktu 
+    WHERE id_kafe = p_id_kafe AND status_aktif = TRUE AND min_belanja <= v_total_belanja_tambahan 
+    ORDER BY min_belanja DESC LIMIT 1;
+
+    IF v_rule_menit IS NOT NULL THEN
+        v_tambahan_menit := v_rule_menit + v_bonus_menit;
+    ELSE
+        v_tambahan_menit := v_bonus_menit;
+    END IF;
+
+    -- 5. Hitung perpanjangan waktu_berakhir
+    v_waktu_berakhir_lama := v_sesi.waktu_berakhir;
+
+    IF v_waktu_berakhir_lama > v_now THEN
+        -- Kasus A: Jika waktu_berakhir masih di masa depan -> Tambahkan dari waktu_berakhir_lama
+        v_waktu_berakhir_baru := v_waktu_berakhir_lama + (v_tambahan_menit || ' minutes')::INTERVAL;
+    ELSE
+        -- Kasus B: Jika sudah melewati waktu (masa tenggang) -> Tambahkan dari NOW() agar waktu terpakai saat tenggang tidak memotong waktu perpanjangan baru
+        v_waktu_berakhir_baru := v_now + (v_tambahan_menit || ' minutes')::INTERVAL;
+    END IF;
+
+    -- 6. Buat data_pesanan tambahan terhubung ke sesi yang sama
+    INSERT INTO data_pesanan (
+        id_pesanan, id_kafe, id_meja, id_sesi_meja, nomor_pesanan,
+        total_belanja, status_pesanan, waktu_pesanan
+    ) VALUES (
+        v_id_pesanan, p_id_kafe, p_id_meja, p_id_sesi_meja, v_nomor_pesanan,
+        v_total_belanja_tambahan, 'selesai', v_now
+    );
+
+    -- 7. Buat detail pesanan di data_detail_pesanan
+    FOR v_item IN SELECT * FROM jsonb_array_elements(p_items)
+    LOOP
+        v_id_produk := (v_item->>'id_produk')::UUID;
+        v_jumlah := (v_item->>'jumlah')::INT;
+        v_catatan := v_item->>'catatan';
+
+        SELECT harga INTO v_harga FROM data_produk WHERE id_produk = v_id_produk;
+        v_subtotal := v_harga * v_jumlah;
+
+        INSERT INTO data_detail_pesanan (
+            id_pesanan, id_produk, jumlah, harga_satuan, subtotal, catatan
+        ) VALUES (
+            v_id_pesanan, v_id_produk, v_jumlah, v_harga, v_subtotal, v_catatan
+        );
+    END LOOP;
+
+    -- 8. Perbarui data_sesi_meja secara atomik
+    UPDATE data_sesi_meja SET
+        total_belanja = COALESCE(total_belanja, 0.00) + v_total_belanja_tambahan,
+        total_durasi_menit = total_durasi_menit + v_tambahan_menit,
+        waktu_berakhir = v_waktu_berakhir_baru,
+        status_sesi = 'aktif',
+        diubah_pada = v_now
+    WHERE id_sesi_meja = p_id_sesi_meja AND id_kafe = p_id_kafe;
+
+    -- Return Metadata JSON Hasil Transaksi Atomik
+    RETURN jsonb_build_object(
+        'id_pesanan', v_id_pesanan,
+        'nomor_pesanan', v_nomor_pesanan,
+        'id_sesi_meja', p_id_sesi_meja,
+        'total_belanja', v_total_belanja_tambahan,
+        'total_belanja_sesi', COALESCE(v_sesi.total_belanja, 0.00) + v_total_belanja_tambahan,
+        'durasi_menit', v_tambahan_menit,
+        'total_durasi_menit', v_sesi.total_durasi_menit + v_tambahan_menit,
+        'waktu_berakhir_lama', v_waktu_berakhir_lama,
+        'waktu_berakhir', v_waktu_berakhir_baru,
+        'is_perpanjangan', TRUE
     );
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;

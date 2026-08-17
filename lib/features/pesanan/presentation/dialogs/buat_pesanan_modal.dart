@@ -20,7 +20,7 @@ class BuatPesananModal extends ConsumerWidget {
     final cartState = ref.watch(posCartProvider);
     final activeCafe = ref.watch(activeCafeProvider).activeCafe;
 
-    final availableMejaList = mejaState.value?.where((m) => m.statusAktif && m.statusMeja == 'tersedia').toList() ?? [];
+    final allMejaList = mejaState.value?.where((m) => m.statusAktif).toList() ?? [];
 
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -50,11 +50,11 @@ class BuatPesananModal extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Kasir - Buat Pesanan Baru',
+                        'Kasir Terminal POS',
                         style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        '${activeCafe?.namaKafe ?? 'Kafe'} • Mode Pembuatan Sesi Meja',
+                        '${activeCafe?.namaKafe ?? 'Kafe'} • Pesanan Awal & Perpanjangan Sesi Comfort Time',
                         style: TextStyle(color: Colors.grey[600], fontSize: 12),
                       ),
                     ],
@@ -91,14 +91,16 @@ class BuatPesananModal extends ConsumerWidget {
                           const SizedBox(height: 8),
                           DropdownButtonFormField<MejaModel>(
                             value: cartState.selectedMeja,
-                            hint: const Text('Pilih Meja Tersedia'),
+                            hint: const Text('Pilih Meja (Tersedia / Terisi)'),
                             decoration: const InputDecoration(
                               prefixIcon: Icon(Icons.table_restaurant_outlined),
                             ),
-                            items: availableMejaList.map((meja) {
+                            items: allMejaList.map((meja) {
+                              final isTerisi = meja.statusMeja == 'terisi';
+                              final statusTag = isTerisi ? '⚡ Terisi (Pesanan Tambahan)' : '🟢 Tersedia';
                               return DropdownMenuItem(
                                 value: meja,
-                                child: Text('Meja ${meja.nomorMeja} (${meja.namaMeja ?? "Kapasitas ${meja.kapasitas}"})'),
+                                child: Text('Meja ${meja.nomorMeja} — $statusTag'),
                               );
                             }).toList(),
                             onChanged: (meja) {
