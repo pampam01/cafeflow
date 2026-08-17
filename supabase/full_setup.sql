@@ -89,11 +89,19 @@ CREATE TABLE IF NOT EXISTS data_meja (
     nomor_meja VARCHAR(20) NOT NULL,
     nama_meja VARCHAR(50),
     kapasitas INT NOT NULL DEFAULT 2 CHECK (kapasitas > 0),
+    urutan_tampilan INT NOT NULL DEFAULT 0,
+    kode_qr VARCHAR(255),
     status_meja VARCHAR(30) NOT NULL DEFAULT 'tersedia' CHECK (status_meja IN ('tersedia', 'terisi', 'dipesan', 'nonaktif')),
+    status_aktif BOOLEAN NOT NULL DEFAULT TRUE,
     dibuat_pada TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     UNIQUE (id_kafe, nomor_meja)
 );
+
+-- Pengamanan Tambahan Kolom Baru pada data_meja
+ALTER TABLE data_meja ADD COLUMN IF NOT EXISTS urutan_tampilan INT NOT NULL DEFAULT 0;
+ALTER TABLE data_meja ADD COLUMN IF NOT EXISTS kode_qr VARCHAR(255);
+ALTER TABLE data_meja ADD COLUMN IF NOT EXISTS status_aktif BOOLEAN NOT NULL DEFAULT TRUE;
 
 CREATE INDEX IF NOT EXISTS idx_data_meja_kafe ON data_meja(id_kafe);
 CREATE INDEX IF NOT EXISTS idx_data_meja_status ON data_meja(status_meja);

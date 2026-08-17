@@ -121,6 +121,15 @@
       "norm_label": "main"
     },
     {
+      "label": "initializeDateFormatting",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "lib_main_initializedateformatting",
+      "community": 13,
+      "norm_label": "initializedateformatting"
+    },
+    {
       "label": "ProviderScope",
       "file_type": "code",
       "source_file": "lib/main.dart",
@@ -155,6 +164,15 @@
       "id": "lib_main_dart_package_flutter_riverpod_flutter_riverpod_dart",
       "community": 13,
       "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "package:intl/date_symbol_data_local.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "id": "package_intl_date_symbol_data_local_dart",
+      "community": 13,
+      "norm_label": "package:intl/date_symbol_data_local.dart"
     },
     {
       "label": "app/routes/app_router.dart",
@@ -521,7 +539,7 @@
       "file_type": "code",
       "source_file": "lib/core/utils/currency_formatter.dart",
       "source_location": null,
-      "id": "package_intl_intl_dart",
+      "id": "lib_core_utils_currency_formatter_dart_package_intl_intl_dart",
       "community": 27,
       "norm_label": "package:intl/intl.dart"
     },
@@ -809,7 +827,7 @@
       "file_type": "code",
       "source_file": "lib/features/autentikasi/presentation/auth_provider.dart",
       "source_location": null,
-      "id": "kafe_presentation_active_cafe_provider_dart",
+      "id": "lib_features_autentikasi_presentation_auth_provider_dart_kafe_presentation_active_cafe_provider_dart",
       "community": 39,
       "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
     },
@@ -1012,13 +1030,31 @@
       "norm_label": "dashboardpage"
     },
     {
-      "label": "_MetricCard",
+      "label": "_KpiCard",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
       "source_location": null,
-      "id": "presentation_dashboard_page_metriccard",
+      "id": "presentation_dashboard_page_kpicard",
       "community": 14,
-      "norm_label": "_metriccard"
+      "norm_label": "_kpicard"
+    },
+    {
+      "label": "_MejaCard",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_mejacard",
+      "community": 14,
+      "norm_label": "_mejacard"
+    },
+    {
+      "label": "_VisualConfig",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_visualconfig",
+      "community": 14,
+      "norm_label": "_visualconfig"
     },
     {
       "label": "build",
@@ -1030,13 +1066,13 @@
       "norm_label": "build"
     },
     {
-      "label": "SingleChildScrollView",
+      "label": "Scaffold",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
       "source_location": null,
-      "id": "presentation_dashboard_page_singlechildscrollview",
+      "id": "presentation_dashboard_page_scaffold",
       "community": 14,
-      "norm_label": "singlechildscrollview"
+      "norm_label": "scaffold"
     },
     {
       "label": "SizedBox",
@@ -1048,6 +1084,15 @@
       "norm_label": "sizedbox"
     },
     {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_padding",
+      "community": 14,
+      "norm_label": "padding"
+    },
+    {
       "label": "Text",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
@@ -1055,6 +1100,15 @@
       "id": "presentation_dashboard_page_text",
       "community": 14,
       "norm_label": "text"
+    },
+    {
+      "label": "LayoutBuilder",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_layoutbuilder",
+      "community": 14,
+      "norm_label": "layoutbuilder"
     },
     {
       "label": "Card",
@@ -1066,6 +1120,33 @@
       "norm_label": "card"
     },
     {
+      "label": "Container",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_container",
+      "community": 14,
+      "norm_label": "container"
+    },
+    {
+      "label": "Divider",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_divider",
+      "community": 14,
+      "norm_label": "divider"
+    },
+    {
+      "label": "_getVisualConfig",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_page_getvisualconfig",
+      "community": 14,
+      "norm_label": "_getvisualconfig"
+    },
+    {
       "label": "package:flutter/material.dart",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
@@ -1075,13 +1156,193 @@
       "norm_label": "package:flutter/material.dart"
     },
     {
-      "label": "package:cafeflow/core/utils/currency_formatter.dart",
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
       "source_location": null,
-      "id": "lib_features_dashboard_presentation_dashboard_page_dart_package_cafeflow_core_utils_currency_formatter_dart",
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_package_flutter_riverpod_flutter_riverpod_dart",
       "community": 14,
-      "norm_label": "package:cafeflow/core/utils/currency_formatter.dart"
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "package:intl/intl.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_package_intl_intl_dart",
+      "community": 14,
+      "norm_label": "package:intl/intl.dart"
+    },
+    {
+      "label": "dashboard_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "dashboard_provider_dart",
+      "community": 14,
+      "norm_label": "dashboard_provider.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 14,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "../../meja/domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_meja_domain_meja_model_dart",
+      "community": 14,
+      "norm_label": "../../meja/domain/meja_model.dart"
+    },
+    {
+      "label": "../../sesi_meja/domain/sesi_meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_sesi_meja_domain_sesi_meja_model_dart",
+      "community": 14,
+      "norm_label": "../../sesi_meja/domain/sesi_meja_model.dart"
+    },
+    {
+      "label": "../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "id": "core_utils_currency_formatter_dart",
+      "community": 14,
+      "norm_label": "../../../core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "dashboard_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "community": 48,
+      "norm_label": "dashboard_provider.dart"
+    },
+    {
+      "label": "DashboardState",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_dashboardstate",
+      "community": 48,
+      "norm_label": "dashboardstate"
+    },
+    {
+      "label": "DashboardNotifier",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_dashboardnotifier",
+      "community": 48,
+      "norm_label": "dashboardnotifier"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_copywith",
+      "community": 48,
+      "norm_label": "copywith"
+    },
+    {
+      "label": "refreshData",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_refreshdata",
+      "community": 48,
+      "norm_label": "refreshdata"
+    },
+    {
+      "label": "_setupRealtimeSubscriptions",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_setuprealtimesubscriptions",
+      "community": 48,
+      "norm_label": "_setuprealtimesubscriptions"
+    },
+    {
+      "label": "dispose",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "presentation_dashboard_provider_dispose",
+      "community": 48,
+      "norm_label": "dispose"
+    },
+    {
+      "label": "dart:async",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "dart_async",
+      "community": 48,
+      "norm_label": "dart:async"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 48,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../../meja/domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart_meja_domain_meja_model_dart",
+      "community": 48,
+      "norm_label": "../../meja/domain/meja_model.dart"
+    },
+    {
+      "label": "../../meja/data/meja_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "meja_data_meja_repository_dart",
+      "community": 48,
+      "norm_label": "../../meja/data/meja_repository.dart"
+    },
+    {
+      "label": "../../meja/presentation/meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "meja_presentation_meja_provider_dart",
+      "community": 48,
+      "norm_label": "../../meja/presentation/meja_provider.dart"
+    },
+    {
+      "label": "../../sesi_meja/domain/sesi_meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart_sesi_meja_domain_sesi_meja_model_dart",
+      "community": 48,
+      "norm_label": "../../sesi_meja/domain/sesi_meja_model.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 48,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
     },
     {
       "label": "cafe_model.dart",
@@ -1381,6 +1642,96 @@
       "norm_label": "../../autentikasi/presentation/auth_provider.dart"
     },
     {
+      "label": "meja_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart",
+      "community": 52,
+      "norm_label": "meja_repository.dart"
+    },
+    {
+      "label": "MejaRepository",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "data_meja_repository_mejarepository",
+      "community": 52,
+      "norm_label": "mejarepository"
+    },
+    {
+      "label": "package:flutter/foundation.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart_package_flutter_foundation_dart",
+      "community": 52,
+      "norm_label": "package:flutter/foundation.dart"
+    },
+    {
+      "label": "package:supabase_flutter/supabase_flutter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart_package_supabase_flutter_supabase_flutter_dart",
+      "community": 52,
+      "norm_label": "package:supabase_flutter/supabase_flutter.dart"
+    },
+    {
+      "label": "../domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart_domain_meja_model_dart",
+      "community": 52,
+      "norm_label": "../domain/meja_model.dart"
+    },
+    {
+      "label": "../../sesi_meja/domain/sesi_meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart_sesi_meja_domain_sesi_meja_model_dart",
+      "community": 52,
+      "norm_label": "../../sesi_meja/domain/sesi_meja_model.dart"
+    },
+    {
+      "label": "../../../core/config/supabase_config.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "id": "lib_features_meja_data_meja_repository_dart_core_config_supabase_config_dart",
+      "community": 52,
+      "norm_label": "../../../core/config/supabase_config.dart"
+    },
+    {
+      "label": "meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/domain/meja_model.dart",
+      "source_location": null,
+      "id": "lib_features_meja_domain_meja_model_dart",
+      "community": 57,
+      "norm_label": "meja_model.dart"
+    },
+    {
+      "label": "MejaModel",
+      "file_type": "code",
+      "source_file": "lib/features/meja/domain/meja_model.dart",
+      "source_location": null,
+      "id": "domain_meja_model_mejamodel",
+      "community": 57,
+      "norm_label": "mejamodel"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "lib/features/meja/domain/meja_model.dart",
+      "source_location": null,
+      "id": "domain_meja_model_copywith",
+      "community": 57,
+      "norm_label": "copywith"
+    },
+    {
       "label": "meja_page.dart",
       "file_type": "code",
       "source_file": "lib/features/meja/presentation/meja_page.dart",
@@ -1399,6 +1750,42 @@
       "norm_label": "mejapage"
     },
     {
+      "label": "_StatusMejaBadge",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_statusmejabadge",
+      "community": 17,
+      "norm_label": "_statusmejabadge"
+    },
+    {
+      "label": "_showTambahMejaDialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_showtambahmejadialog",
+      "community": 17,
+      "norm_label": "_showtambahmejadialog"
+    },
+    {
+      "label": "_showEditMejaDialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_showeditmejadialog",
+      "community": 17,
+      "norm_label": "_showeditmejadialog"
+    },
+    {
+      "label": "_showLihatQrDialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_showlihatqrdialog",
+      "community": 17,
+      "norm_label": "_showlihatqrdialog"
+    },
+    {
       "label": "build",
       "file_type": "code",
       "source_file": "lib/features/meja/presentation/meja_page.dart",
@@ -1408,13 +1795,13 @@
       "norm_label": "build"
     },
     {
-      "label": "Padding",
+      "label": "Scaffold",
       "file_type": "code",
       "source_file": "lib/features/meja/presentation/meja_page.dart",
       "source_location": null,
-      "id": "presentation_meja_page_padding",
+      "id": "presentation_meja_page_scaffold",
       "community": 17,
-      "norm_label": "padding"
+      "norm_label": "scaffold"
     },
     {
       "label": "SizedBox",
@@ -1426,6 +1813,33 @@
       "norm_label": "sizedbox"
     },
     {
+      "label": "Icon",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_icon",
+      "community": 17,
+      "norm_label": "icon"
+    },
+    {
+      "label": "Spacer",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_spacer",
+      "community": 17,
+      "norm_label": "spacer"
+    },
+    {
+      "label": "Center",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_center",
+      "community": 17,
+      "norm_label": "center"
+    },
+    {
       "label": "Text",
       "file_type": "code",
       "source_file": "lib/features/meja/presentation/meja_page.dart",
@@ -1435,6 +1849,33 @@
       "norm_label": "text"
     },
     {
+      "label": "SingleChildScrollView",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_singlechildscrollview",
+      "community": 17,
+      "norm_label": "singlechildscrollview"
+    },
+    {
+      "label": "DataRow",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_datarow",
+      "community": 17,
+      "norm_label": "datarow"
+    },
+    {
+      "label": "Container",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "presentation_meja_page_container",
+      "community": 17,
+      "norm_label": "container"
+    },
+    {
       "label": "package:flutter/material.dart",
       "file_type": "code",
       "source_file": "lib/features/meja/presentation/meja_page.dart",
@@ -1442,6 +1883,384 @@
       "id": "lib_features_meja_presentation_meja_page_dart_package_flutter_material_dart",
       "community": 17,
       "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_page_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 17,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_page_dart_meja_provider_dart",
+      "community": 17,
+      "norm_label": "meja_provider.dart"
+    },
+    {
+      "label": "../domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_page_dart_domain_meja_model_dart",
+      "community": 17,
+      "norm_label": "../domain/meja_model.dart"
+    },
+    {
+      "label": "dialogs/tambah_edit_meja_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_dart",
+      "community": 17,
+      "norm_label": "dialogs/tambah_edit_meja_dialog.dart"
+    },
+    {
+      "label": "dialogs/lihat_qr_meja_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_dart",
+      "community": 17,
+      "norm_label": "dialogs/lihat_qr_meja_dialog.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_page_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 17,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_provider_dart",
+      "community": 51,
+      "norm_label": "meja_provider.dart"
+    },
+    {
+      "label": "MejaListNotifier",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "presentation_meja_provider_mejalistnotifier",
+      "community": 51,
+      "norm_label": "mejalistnotifier"
+    },
+    {
+      "label": "MejaRepository",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "presentation_meja_provider_mejarepository",
+      "community": 51,
+      "norm_label": "mejarepository"
+    },
+    {
+      "label": "loadMeja",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "presentation_meja_provider_loadmeja",
+      "community": 51,
+      "norm_label": "loadmeja"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_provider_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 51,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../data/meja_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "data_meja_repository_dart",
+      "community": 51,
+      "norm_label": "../data/meja_repository.dart"
+    },
+    {
+      "label": "../domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_provider_dart_domain_meja_model_dart",
+      "community": 51,
+      "norm_label": "../domain/meja_model.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_meja_provider_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 51,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "lihat_qr_meja_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "community": 47,
+      "norm_label": "lihat_qr_meja_dialog.dart"
+    },
+    {
+      "label": "LihatQrMejaDialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_lihatqrmejadialog",
+      "community": 47,
+      "norm_label": "lihatqrmejadialog"
+    },
+    {
+      "label": "_LihatQrMejaDialogState",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_lihatqrmejadialogstate",
+      "community": 47,
+      "norm_label": "_lihatqrmejadialogstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_initstate",
+      "community": 47,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "SnackBar",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_snackbar",
+      "community": 47,
+      "norm_label": "snackbar"
+    },
+    {
+      "label": "_copyToken",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_copytoken",
+      "community": 47,
+      "norm_label": "_copytoken"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_build",
+      "community": 47,
+      "norm_label": "build"
+    },
+    {
+      "label": "Dialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_dialog",
+      "community": 47,
+      "norm_label": "dialog"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_lihat_qr_meja_dialog_sizedbox",
+      "community": 47,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_package_flutter_material_dart",
+      "community": 47,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter/services.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "package_flutter_services_dart",
+      "community": 47,
+      "norm_label": "package:flutter/services.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 47,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "package:qr_flutter/qr_flutter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "package_qr_flutter_qr_flutter_dart",
+      "community": 47,
+      "norm_label": "package:qr_flutter/qr_flutter.dart"
+    },
+    {
+      "label": "../../domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_domain_meja_model_dart",
+      "community": 47,
+      "norm_label": "../../domain/meja_model.dart"
+    },
+    {
+      "label": "../meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_meja_provider_dart",
+      "community": 47,
+      "norm_label": "../meja_provider.dart"
+    },
+    {
+      "label": "tambah_edit_meja_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "community": 49,
+      "norm_label": "tambah_edit_meja_dialog.dart"
+    },
+    {
+      "label": "TambahEditMejaDialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_tambaheditmejadialog",
+      "community": 49,
+      "norm_label": "tambaheditmejadialog"
+    },
+    {
+      "label": "_TambahEditMejaDialogState",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_tambaheditmejadialogstate",
+      "community": 49,
+      "norm_label": "_tambaheditmejadialogstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_initstate",
+      "community": 49,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "dispose",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_dispose",
+      "community": 49,
+      "norm_label": "dispose"
+    },
+    {
+      "label": "SnackBar",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_snackbar",
+      "community": 49,
+      "norm_label": "snackbar"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_build",
+      "community": 49,
+      "norm_label": "build"
+    },
+    {
+      "label": "Dialog",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_dialog",
+      "community": 49,
+      "norm_label": "dialog"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_meja_dialog_sizedbox",
+      "community": 49,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_package_flutter_material_dart",
+      "community": 49,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 49,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../../domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_domain_meja_model_dart",
+      "community": 49,
+      "norm_label": "../../domain/meja_model.dart"
+    },
+    {
+      "label": "../meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_meja_provider_dart",
+      "community": 49,
+      "norm_label": "../meja_provider.dart"
     },
     {
       "label": "pelanggan_page.dart",
@@ -1694,6 +2513,33 @@
       "id": "lib_features_produk_presentation_produk_page_dart_package_flutter_material_dart",
       "community": 21,
       "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "sesi_meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/sesi_meja/domain/sesi_meja_model.dart",
+      "source_location": null,
+      "id": "lib_features_sesi_meja_domain_sesi_meja_model_dart",
+      "community": 58,
+      "norm_label": "sesi_meja_model.dart"
+    },
+    {
+      "label": "SesiMejaModel",
+      "file_type": "code",
+      "source_file": "lib/features/sesi_meja/domain/sesi_meja_model.dart",
+      "source_location": null,
+      "id": "domain_sesi_meja_model_sesimejamodel",
+      "community": 58,
+      "norm_label": "sesimejamodel"
+    },
+    {
+      "label": "getStatusVisual",
+      "file_type": "code",
+      "source_file": "lib/features/sesi_meja/domain/sesi_meja_model.dart",
+      "source_location": null,
+      "id": "domain_sesi_meja_model_getstatusvisual",
+      "community": 58,
+      "norm_label": "getstatusvisual"
     },
     {
       "label": "sesi_meja_page.dart",
@@ -1979,9 +2825,72 @@
       "file_type": "code",
       "source_file": "test/currency_formatter_test.dart",
       "source_location": null,
-      "id": "test_currency_formatter_test_dart_package_cafeflow_core_utils_currency_formatter_dart",
+      "id": "package_cafeflow_core_utils_currency_formatter_dart",
       "community": 30,
       "norm_label": "package:cafeflow/core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "dashboard_occupancy_test.dart",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "test_dashboard_occupancy_test_dart",
+      "community": 54,
+      "norm_label": "dashboard_occupancy_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "test_dashboard_occupancy_test_main",
+      "community": 54,
+      "norm_label": "main"
+    },
+    {
+      "label": "MejaModel",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "test_dashboard_occupancy_test_mejamodel",
+      "community": 54,
+      "norm_label": "mejamodel"
+    },
+    {
+      "label": "package:flutter_test/flutter_test.dart",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "test_dashboard_occupancy_test_dart_package_flutter_test_flutter_test_dart",
+      "community": 54,
+      "norm_label": "package:flutter_test/flutter_test.dart"
+    },
+    {
+      "label": "package:cafeflow/features/meja/domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "package_cafeflow_features_meja_domain_meja_model_dart",
+      "community": 54,
+      "norm_label": "package:cafeflow/features/meja/domain/meja_model.dart"
+    },
+    {
+      "label": "package:cafeflow/features/sesi_meja/domain/sesi_meja_model.dart",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "package_cafeflow_features_sesi_meja_domain_sesi_meja_model_dart",
+      "community": 54,
+      "norm_label": "package:cafeflow/features/sesi_meja/domain/sesi_meja_model.dart"
+    },
+    {
+      "label": "package:cafeflow/features/dashboard/presentation/dashboard_provider.dart",
+      "file_type": "code",
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "id": "package_cafeflow_features_dashboard_presentation_dashboard_provider_dart",
+      "community": 54,
+      "norm_label": "package:cafeflow/features/dashboard/presentation/dashboard_provider.dart"
     },
     {
       "label": "widget_test.dart",
@@ -2223,7 +3132,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_binary_messenger_impl_h",
-      "community": 3,
+      "community": 55,
       "norm_label": "binary_messenger_impl.h"
     },
     {
@@ -2232,7 +3141,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L15",
       "id": "cpp_client_wrapper_binary_messenger_impl_flutter",
-      "community": 3,
+      "community": 55,
       "norm_label": "flutter()"
     },
     {
@@ -2241,7 +3150,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_binary_messenger_impl_h_namespace",
-      "community": 3,
+      "community": 55,
       "norm_label": "namespace"
     },
     {
@@ -3195,7 +4104,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_basic_message_channel_h",
-      "community": 8,
+      "community": 56,
       "norm_label": "basic_message_channel.h"
     },
     {
@@ -3204,7 +4113,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L15",
       "id": "flutter_basic_message_channel_flutter",
-      "community": 8,
+      "community": 56,
       "norm_label": "flutter()"
     },
     {
@@ -3213,7 +4122,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_basic_message_channel_h_namespace",
-      "community": 8,
+      "community": 56,
       "norm_label": "namespace"
     },
     {
@@ -3222,7 +4131,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_binary_messenger_h",
-      "community": 3,
+      "community": 55,
       "norm_label": "binary_messenger.h"
     },
     {
@@ -3231,7 +4140,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L11",
       "id": "flutter_binary_messenger_flutter",
-      "community": 3,
+      "community": 55,
       "norm_label": "flutter()"
     },
     {
@@ -3240,7 +4149,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L11",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_binary_messenger_h_namespace",
-      "community": 3,
+      "community": 55,
       "norm_label": "namespace"
     },
     {
@@ -3537,7 +4446,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_message_codec_h",
-      "community": 8,
+      "community": 56,
       "norm_label": "message_codec.h"
     },
     {
@@ -3546,7 +4455,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L12",
       "id": "flutter_message_codec_flutter",
-      "community": 8,
+      "community": 56,
       "norm_label": "flutter()"
     },
     {
@@ -3555,7 +4464,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L12",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_message_codec_h_namespace",
-      "community": 8,
+      "community": 56,
       "norm_label": "namespace"
     },
     {
@@ -3564,7 +4473,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_call_h",
-      "community": 1,
+      "community": 50,
       "norm_label": "method_call.h"
     },
     {
@@ -3573,7 +4482,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L11",
       "id": "flutter_method_call_flutter",
-      "community": 1,
+      "community": 50,
       "norm_label": "flutter()"
     },
     {
@@ -3582,7 +4491,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L11",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_call_h_namespace",
-      "community": 1,
+      "community": 50,
       "norm_label": "namespace"
     },
     {
@@ -3591,7 +4500,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_channel_h",
-      "community": 1,
+      "community": 53,
       "norm_label": "method_channel.h"
     },
     {
@@ -3600,7 +4509,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L18",
       "id": "flutter_method_channel_flutter",
-      "community": 1,
+      "community": 53,
       "norm_label": "flutter()"
     },
     {
@@ -3609,7 +4518,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L18",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_channel_h_namespace",
-      "community": 1,
+      "community": 53,
       "norm_label": "namespace"
     },
     {
@@ -3618,7 +4527,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L99",
       "id": "flutter_method_channel_setmethodcallhandler",
-      "community": 1,
+      "community": 53,
       "norm_label": "setmethodcallhandler()"
     },
     {
@@ -3627,7 +4536,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L99",
       "id": "methodcallhandler",
-      "community": 1,
+      "community": 53,
       "norm_label": "methodcallhandler"
     },
     {
@@ -3636,7 +4545,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L130",
       "id": "flutter_method_channel_resize",
-      "community": 1,
+      "community": 53,
       "norm_label": "resize()"
     },
     {
@@ -3645,7 +4554,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L139",
       "id": "flutter_method_channel_setwarnsonoverflow",
-      "community": 1,
+      "community": 53,
       "norm_label": "setwarnsonoverflow()"
     },
     {
@@ -3654,7 +4563,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h",
-      "community": 1,
+      "community": 50,
       "norm_label": "method_codec.h"
     },
     {
@@ -3663,7 +4572,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L15",
       "id": "flutter_method_codec_flutter",
-      "community": 1,
+      "community": 50,
       "norm_label": "flutter()"
     },
     {
@@ -3672,7 +4581,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h_namespace",
-      "community": 1,
+      "community": 50,
       "norm_label": "namespace"
     },
     {
@@ -3681,7 +4590,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L75",
       "id": "flutter_method_codec_decodeandprocessresponseenvelope",
-      "community": 1,
+      "community": 50,
       "norm_label": "decodeandprocessresponseenvelope()"
     },
     {
@@ -3690,7 +4599,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L75",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h_methodresult",
-      "community": 1,
+      "community": 50,
       "norm_label": "methodresult"
     },
     {
@@ -3888,7 +4797,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_standard_method_codec_h",
-      "community": 8,
+      "community": 50,
       "norm_label": "standard_method_codec.h"
     },
     {
@@ -3897,7 +4806,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L15",
       "id": "flutter_standard_method_codec_flutter",
-      "community": 8,
+      "community": 50,
       "norm_label": "flutter()"
     },
     {
@@ -3906,7 +4815,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_standard_method_codec_h_namespace",
-      "community": 8,
+      "community": 50,
       "norm_label": "namespace"
     },
     {
@@ -4576,6 +5485,69 @@
       "norm_label": "workflow: graphify"
     },
     {
+      "label": "package:intl/intl.dart",
+      "file_type": "code",
+      "source_file": "lib/core/utils/currency_formatter.dart",
+      "source_location": null,
+      "community": 27,
+      "norm_label": "package:intl/intl.dart",
+      "id": "package_intl_intl_dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/autentikasi/presentation/auth_provider.dart",
+      "source_location": null,
+      "community": 39,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart",
+      "id": "kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "label": "_MetricCard",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "community": 14,
+      "norm_label": "_metriccard",
+      "id": "presentation_dashboard_page_metriccard"
+    },
+    {
+      "label": "SingleChildScrollView",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "community": 14,
+      "norm_label": "singlechildscrollview",
+      "id": "presentation_dashboard_page_singlechildscrollview"
+    },
+    {
+      "label": "package:cafeflow/core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "community": 14,
+      "norm_label": "package:cafeflow/core/utils/currency_formatter.dart",
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_package_cafeflow_core_utils_currency_formatter_dart"
+    },
+    {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "community": 17,
+      "norm_label": "padding",
+      "id": "presentation_meja_page_padding"
+    },
+    {
+      "label": "package:cafeflow/core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "test/currency_formatter_test.dart",
+      "source_location": null,
+      "community": 30,
+      "norm_label": "package:cafeflow/core/utils/currency_formatter.dart",
+      "id": "test_currency_formatter_test_dart_package_cafeflow_core_utils_currency_formatter_dart"
+    },
+    {
       "label": "core/config/supabase_config.dart",
       "file_type": "code",
       "source_file": "lib/main.dart",
@@ -4781,6 +5753,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_main_dart",
+      "target": "lib_main_initializedateformatting"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
       "target": "lib_main_main"
     },
     {
@@ -4792,6 +5774,16 @@
       "weight": 1.0,
       "source": "lib_main_dart",
       "target": "lib_main_providerscope"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "package_intl_date_symbol_data_local_dart"
     },
     {
       "relation": "imports",
@@ -5131,6 +6123,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_core_utils_currency_formatter_dart",
+      "target": "lib_core_utils_currency_formatter_dart_package_intl_intl_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/core/utils/currency_formatter.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_core_utils_currency_formatter_dart",
       "target": "package_intl_intl_dart"
     },
     {
@@ -5391,6 +6393,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_autentikasi_presentation_auth_provider_dart",
+      "target": "lib_features_autentikasi_presentation_auth_provider_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/autentikasi/presentation/auth_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_autentikasi_presentation_auth_provider_dart",
       "target": "lib_features_autentikasi_presentation_auth_provider_dart_package_flutter_riverpod_flutter_riverpod_dart"
     },
     {
@@ -5631,6 +6643,46 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "dashboard_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "lib_features_dashboard_presentation_dashboard_page_dart_package_cafeflow_core_utils_currency_formatter_dart"
     },
     {
@@ -5642,6 +6694,36 @@
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "lib_features_dashboard_presentation_dashboard_page_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_package_intl_intl_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_sesi_meja_domain_sesi_meja_model_dart"
     },
     {
       "relation": "defines",
@@ -5671,6 +6753,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_container"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "presentation_dashboard_page_dashboardpage"
     },
     {
@@ -5681,7 +6773,77 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_divider"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_getvisualconfig"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_kpicard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_layoutbuilder"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_mejacard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "presentation_dashboard_page_metriccard"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_padding"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_scaffold"
     },
     {
       "relation": "defines",
@@ -5712,6 +6874,146 @@
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "presentation_dashboard_page_text"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "presentation_dashboard_page_visualconfig"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "dart_async"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_provider_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_provider_dart_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_provider_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_provider_dart_sesi_meja_domain_sesi_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "meja_data_meja_repository_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "meja_presentation_meja_provider_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_dashboardnotifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_dashboardstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_dispose"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_refreshdata"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "presentation_dashboard_provider_setuprealtimesubscriptions"
     },
     {
       "relation": "defines",
@@ -6004,6 +7306,136 @@
       "target": "presentation_pilih_kafe_page_text"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "data_meja_repository_mejarepository"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "lib_features_meja_data_meja_repository_dart_core_config_supabase_config_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "lib_features_meja_data_meja_repository_dart_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "lib_features_meja_data_meja_repository_dart_package_flutter_foundation_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "lib_features_meja_data_meja_repository_dart_package_supabase_flutter_supabase_flutter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/data/meja_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_data_meja_repository_dart",
+      "target": "lib_features_meja_data_meja_repository_dart_sesi_meja_domain_sesi_meja_model_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/domain/meja_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_domain_meja_model_dart",
+      "target": "domain_meja_model_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/domain/meja_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_domain_meja_model_dart",
+      "target": "domain_meja_model_mejamodel"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "lib_features_meja_presentation_meja_page_dart_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "lib_features_meja_presentation_meja_page_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "lib_features_meja_presentation_meja_page_dart_meja_provider_dart"
+    },
+    {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6014,6 +7446,16 @@
       "target": "lib_features_meja_presentation_meja_page_dart_package_flutter_material_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "lib_features_meja_presentation_meja_page_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6022,6 +7464,46 @@
       "weight": 1.0,
       "source": "lib_features_meja_presentation_meja_page_dart",
       "target": "presentation_meja_page_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_center"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_container"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_datarow"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_icon"
     },
     {
       "relation": "defines",
@@ -6051,6 +7533,56 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_showeditmejadialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_showlihatqrdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_showtambahmejadialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_singlechildscrollview"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
       "target": "presentation_meja_page_sizedbox"
     },
     {
@@ -6061,7 +7593,357 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_spacer"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
+      "target": "presentation_meja_page_statusmejabadge"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_page_dart",
       "target": "presentation_meja_page_text"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "data_meja_repository_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "lib_features_meja_presentation_meja_provider_dart_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "lib_features_meja_presentation_meja_provider_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "lib_features_meja_presentation_meja_provider_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "presentation_meja_provider_loadmeja"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "presentation_meja_provider_mejalistnotifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/meja_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_meja_provider_dart",
+      "target": "presentation_meja_provider_mejarepository"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_copytoken"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_dialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_lihatqrmejadialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_lihatqrmejadialogstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "dialogs_lihat_qr_meja_dialog_snackbar"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_meja_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "package_flutter_services_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/lihat_qr_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_lihat_qr_meja_dialog_dart",
+      "target": "package_qr_flutter_qr_flutter_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_dialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_dispose"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_snackbar"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_tambaheditmejadialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "dialogs_tambah_edit_meja_dialog_tambaheditmejadialogstate"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_meja_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/meja/presentation/dialogs/tambah_edit_meja_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart",
+      "target": "lib_features_meja_presentation_dialogs_tambah_edit_meja_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart"
     },
     {
       "relation": "imports",
@@ -6302,6 +8184,26 @@
       "weight": 1.0,
       "source": "lib_features_produk_presentation_produk_page_dart",
       "target": "presentation_produk_page_text"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/sesi_meja/domain/sesi_meja_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_sesi_meja_domain_sesi_meja_model_dart",
+      "target": "domain_sesi_meja_model_getstatusvisual"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/sesi_meja/domain/sesi_meja_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_sesi_meja_domain_sesi_meja_model_dart",
+      "target": "domain_sesi_meja_model_sesimejamodel"
     },
     {
       "relation": "imports",
@@ -6571,6 +8473,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "test_currency_formatter_test_dart",
+      "target": "package_cafeflow_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/currency_formatter_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_currency_formatter_test_dart",
       "target": "test_currency_formatter_test_dart_package_cafeflow_core_utils_currency_formatter_dart"
     },
     {
@@ -6592,6 +8504,66 @@
       "weight": 1.0,
       "source": "test_currency_formatter_test_dart",
       "target": "test_currency_formatter_test_main"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "package_cafeflow_features_dashboard_presentation_dashboard_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "package_cafeflow_features_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "package_cafeflow_features_sesi_meja_domain_sesi_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "test_dashboard_occupancy_test_dart_package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "test_dashboard_occupancy_test_main"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/dashboard_occupancy_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_dashboard_occupancy_test_dart",
+      "target": "test_dashboard_occupancy_test_mejamodel"
     },
     {
       "relation": "imports",
@@ -10886,5 +12858,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "56de08a5f6d88105168fd1332b32d758c4f3e3d4"
+  "built_at_commit": "258b820bb60d2023db73f87b82137348f9bc6b9a"
 }

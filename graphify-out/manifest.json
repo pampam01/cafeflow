@@ -20,7 +20,7 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\android\\app\\src\\main\\java\\io\\flutter\\plugins\\GeneratedPluginRegistrant.java": {
-    "mtime": 1786974776.8883197,
+    "mtime": 1786977212.8312137,
     "ast_hash": "247e114e7c8a077bc8c2d75149c559ab",
     "semantic_hash": ""
   },
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\main.dart": {
-    "mtime": 1786974702.2319775,
-    "ast_hash": "206029219117c4347ae76c57f49f5e82",
+    "mtime": 1786977112.5060866,
+    "ast_hash": "2f0b90c169fd68f91f5c320af29de795",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\app\\routes\\app_router.dart": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\dashboard\\presentation\\dashboard_page.dart": {
-    "mtime": 1786974862.506797,
-    "ast_hash": "d06dea63d04d82043b9f695abeaa63e1",
+    "mtime": 1786976736.0471938,
+    "ast_hash": "b4be50316fe7e2badbb84402fbda3c81",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\kafe\\presentation\\kafe_page.dart": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\meja\\presentation\\meja_page.dart": {
-    "mtime": 1786973020.6452632,
-    "ast_hash": "8ef5c2eb6433497ec064ed6dd0f4f1bf",
+    "mtime": 1786976743.4026182,
+    "ast_hash": "491e73804081c2cb252b43b0295fa1a9",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pelanggan\\presentation\\pelanggan_page.dart": {
@@ -130,12 +130,12 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\windows\\flutter\\generated_plugin_registrant.cc": {
-    "mtime": 1786974776.9130917,
+    "mtime": 1786977212.852419,
     "ast_hash": "8f827c92146e46fc11f4e794a498348b",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\windows\\flutter\\generated_plugin_registrant.h": {
-    "mtime": 1786974776.9082866,
+    "mtime": 1786977212.848379,
     "ast_hash": "0ea33875f9f8e118f9c2ded03e2e2835",
     "semantic_hash": ""
   },
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\pubspec.yaml": {
-    "mtime": 1786972911.213072,
-    "ast_hash": "c251785b0c05866afe1438d524288c75",
+    "mtime": 1786976617.8094,
+    "ast_hash": "f886550b50fd86462f84b12130febdf5",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\README.md": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\full_setup.sql": {
-    "mtime": 1786976045.2648115,
-    "ast_hash": "abb2e847fd4b2279a7750f0f872da473",
+    "mtime": 1786976672.6084151,
+    "ast_hash": "d1c8749daefb973b29e822503121ef13",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\seed.sql": {
@@ -527,6 +527,46 @@
   "D:\\usaha\\cafeflow\\test\\auth_repository_test.dart": {
     "mtime": 1786974710.2700171,
     "ast_hash": "596418c9caba4d17015fb90c86ad9e20",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\dashboard\\presentation\\dashboard_provider.dart": {
+    "mtime": 1786976710.7908003,
+    "ast_hash": "cd49b2512b89c7fb74473468c0f5954f",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\data\\meja_repository.dart": {
+    "mtime": 1786976694.4718485,
+    "ast_hash": "189d472b37837fb1d09ba71a8afa8154",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\domain\\meja_model.dart": {
+    "mtime": 1786976680.6458411,
+    "ast_hash": "a07f6cf199a7883b764ccbb6853c6e07",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\presentation\\meja_provider.dart": {
+    "mtime": 1786976700.502211,
+    "ast_hash": "d494fe935ccadc8e83de19db7f4ea69a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\presentation\\dialogs\\lihat_qr_meja_dialog.dart": {
+    "mtime": 1786976726.2006752,
+    "ast_hash": "ad7991466bb53d215f4c7c8c88d4b413",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\presentation\\dialogs\\tambah_edit_meja_dialog.dart": {
+    "mtime": 1786976717.89038,
+    "ast_hash": "219709220913acfc39cb6fc0d973a713",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\sesi_meja\\domain\\sesi_meja_model.dart": {
+    "mtime": 1786976686.3469648,
+    "ast_hash": "3eec363bb9ebe7825a15462e3fcecef7",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\dashboard_occupancy_test.dart": {
+    "mtime": 1786976750.8719082,
+    "ast_hash": "d0cb33b17561a0ffd1482e9cc020ee29",
     "semantic_hash": ""
   }
 }
