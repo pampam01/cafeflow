@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class AppResponsiveLayout extends StatelessWidget {
+import '../../features/autentikasi/presentation/auth_provider.dart';
+import '../../features/autentikasi/presentation/user_profile_provider.dart';
+import '../../features/kafe/presentation/active_cafe_provider.dart';
+
+class AppResponsiveLayout extends ConsumerWidget {
   final Widget child;
   final String location;
 
@@ -32,11 +37,18 @@ class AppResponsiveLayout extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final mediaQuery = MediaQuery.of(context);
     final isDesktop = mediaQuery.size.width >= 900;
     final selectedIndex = _calculateSelectedIndex();
+
+    final userProfileAsync = ref.watch(userProfileProvider);
+    final activeCafeState = ref.watch(activeCafeProvider);
+
+    final namaUser = userProfileAsync.value?.namaLengkap ?? 'Staf Cafe';
+    final peranUser = activeCafeState.activeCafe?.peranPegawai ?? userProfileAsync.value?.peran ?? 'Staf';
+    final namaKafe = activeCafeState.activeCafe?.namaKafe ?? 'Kafe';
 
     if (isDesktop) {
       return Scaffold(
@@ -44,12 +56,12 @@ class AppResponsiveLayout extends StatelessWidget {
           children: [
             // Sidebar Navigation (Desktop)
             Container(
-              width: 250,
+              width: 260,
               decoration: BoxDecoration(
                 color: theme.colorScheme.surface,
                 border: Border(
                   right: BorderSide(
-                    color: theme.colorScheme.outline.withOpacity(0.4),
+                    color: theme.colorScheme.outline.withValues(alpha: 0.4),
                     width: 1,
                   ),
                 ),
@@ -64,7 +76,7 @@ class AppResponsiveLayout extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: theme.colorScheme.primary.withOpacity(0.1),
+                            color: theme.colorScheme.primary.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Icon(
@@ -74,24 +86,27 @@ class AppResponsiveLayout extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 12),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'CafeFlow',
-                              style: theme.textTheme.titleMedium?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: theme.colorScheme.primary,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'CafeFlow',
+                                style: theme.textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: theme.colorScheme.primary,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Comfort Time SaaS',
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                color: Colors.grey[600],
-                                fontSize: 11,
+                              Text(
+                                namaKafe,
+                                overflow: TextOverflow.ellipsis,
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: Colors.grey[600],
+                                  fontSize: 11,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -99,7 +114,7 @@ class AppResponsiveLayout extends StatelessWidget {
                   const Divider(height: 1),
                   const SizedBox(height: 12),
 
-                  // Menu Items
+                  // Navigation Menu Items
                   Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -113,7 +128,7 @@ class AppResponsiveLayout extends StatelessWidget {
                           child: ListTile(
                             dense: true,
                             selected: isSelected,
-                            selectedTileColor: theme.colorScheme.primary.withOpacity(0.08),
+                            selectedTileColor: theme.colorScheme.primary.withValues(alpha: 0.08),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -137,25 +152,26 @@ class AppResponsiveLayout extends StatelessWidget {
                     ),
                   ),
 
-                  // Status Badge & Profile Footer
+                  // Profile & Logout Footer
                   Container(
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(14),
                     margin: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.primary.withOpacity(0.04),
+                      color: theme.colorScheme.primary.withValues(alpha: 0.04),
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: theme.colorScheme.outline.withOpacity(0.2)),
+                      border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.2)),
                     ),
                     child: Row(
                       children: [
                         CircleAvatar(
                           radius: 16,
-                          backgroundColor: theme.colorScheme.primary.withOpacity(0.15),
+                          backgroundColor: theme.colorScheme.primary.withValues(alpha: 0.15),
                           child: Text(
-                            'K',
+                            namaUser.isNotEmpty ? namaUser[0].toUpperCase() : 'U',
                             style: TextStyle(
                               color: theme.colorScheme.primary,
                               fontWeight: FontWeight.bold,
+                              fontSize: 13,
                             ),
                           ),
                         ),
@@ -164,19 +180,20 @@ class AppResponsiveLayout extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
-                                'Kasir Utama',
-                                style: TextStyle(
+                              Text(
+                                namaUser,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 13,
                                 ),
                               ),
                               Text(
-                                'Status: Ramai',
+                                peranUser.toUpperCase(),
                                 style: TextStyle(
-                                  color: Colors.amber[800],
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w500,
+                                  color: theme.colorScheme.secondary,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -184,8 +201,10 @@ class AppResponsiveLayout extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(Icons.logout_rounded, size: 18),
-                          onPressed: () => context.go('/login'),
-                          tooltip: 'Keluar',
+                          onPressed: () {
+                            ref.read(authNotifierProvider.notifier).signOut();
+                          },
+                          tooltip: 'Keluar Akun',
                         ),
                       ],
                     ),
@@ -194,7 +213,7 @@ class AppResponsiveLayout extends StatelessWidget {
               ),
             ),
 
-            // Main Content Area (Desktop)
+            // Main Desktop Content
             Expanded(
               child: Scaffold(
                 appBar: PreferredSize(
@@ -205,7 +224,7 @@ class AppResponsiveLayout extends StatelessWidget {
                       color: theme.colorScheme.surface,
                       border: Border(
                         bottom: BorderSide(
-                          color: theme.colorScheme.outline.withOpacity(0.3),
+                          color: theme.colorScheme.outline.withValues(alpha: 0.3),
                         ),
                       ),
                     ),
@@ -218,6 +237,16 @@ class AppResponsiveLayout extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
+                        if (activeCafeState.availableCafes.length > 1)
+                          OutlinedButton.icon(
+                            onPressed: () => context.go('/pilih-kafe'),
+                            icon: const Icon(Icons.swap_horiz_rounded, size: 16),
+                            label: Text(namaKafe),
+                            style: OutlinedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            ),
+                          ),
+                        const SizedBox(width: 12),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
@@ -264,8 +293,11 @@ class AppResponsiveLayout extends StatelessWidget {
         title: Text(navItems[selectedIndex].label),
         actions: [
           IconButton(
-            icon: const Icon(Icons.notifications_outlined),
-            onPressed: () {},
+            icon: const Icon(Icons.logout_rounded),
+            onPressed: () {
+              ref.read(authNotifierProvider.notifier).signOut();
+            },
+            tooltip: 'Keluar',
           ),
         ],
       ),

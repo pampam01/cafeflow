@@ -1,0 +1,532 @@
+{
+  "D:\\usaha\\cafeflow\\android\\build.gradle.kts": {
+    "mtime": 1786972852.1398141,
+    "ast_hash": "0be80ea97a9d674e007d056c9b84ed4c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\gradlew": {
+    "mtime": 1786972854.870848,
+    "ast_hash": "7f1cd7eb3f75a1dc85cd37753972a6e2",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\settings.gradle.kts": {
+    "mtime": 1786972853.0541034,
+    "ast_hash": "723bf1964220418391e2513e9aa13d4e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\build.gradle.kts": {
+    "mtime": 1786972852.0393176,
+    "ast_hash": "2dd61d01d7ce3ef08b8a8f505f4de1cf",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\java\\io\\flutter\\plugins\\GeneratedPluginRegistrant.java": {
+    "mtime": 1786974776.8883197,
+    "ast_hash": "247e114e7c8a077bc8c2d75149c559ab",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\kotlin\\com\\cafeflow\\cafeflow\\MainActivity.kt": {
+    "mtime": 1786972852.085591,
+    "ast_hash": "07297cbd437708b9a77bd5f5a746fe6a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\main.dart": {
+    "mtime": 1786974702.2319775,
+    "ast_hash": "206029219117c4347ae76c57f49f5e82",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\app\\routes\\app_router.dart": {
+    "mtime": 1786974832.98787,
+    "ast_hash": "9ff9e204eee5780fc449e247710014f3",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\app\\theme\\app_theme.dart": {
+    "mtime": 1786973256.0753694,
+    "ast_hash": "de224988fc3eb3c1e87ebdf49f27427c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\core\\config\\supabase_config.dart": {
+    "mtime": 1786974844.2492726,
+    "ast_hash": "41b66e11678a71e728b90371dce6ac41",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\core\\utils\\currency_formatter.dart": {
+    "mtime": 1786972966.3940046,
+    "ast_hash": "9b9e30d4bd5004787b8c5547a3783b75",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\analitik\\presentation\\analitik_page.dart": {
+    "mtime": 1786973038.3269637,
+    "ast_hash": "19781e61fb1733bb23f552536c784b00",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\presentation\\login_page.dart": {
+    "mtime": 1786974683.3538587,
+    "ast_hash": "65986cef16bf0998cca29b8a2c36e06f",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\dashboard\\presentation\\dashboard_page.dart": {
+    "mtime": 1786974862.506797,
+    "ast_hash": "d06dea63d04d82043b9f695abeaa63e1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\kafe\\presentation\\kafe_page.dart": {
+    "mtime": 1786973055.0828295,
+    "ast_hash": "77f34c6b921f2c75faa73d2ca5d82642",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\meja\\presentation\\meja_page.dart": {
+    "mtime": 1786973020.6452632,
+    "ast_hash": "8ef5c2eb6433497ec064ed6dd0f4f1bf",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pelanggan\\presentation\\pelanggan_page.dart": {
+    "mtime": 1786973033.9382203,
+    "ast_hash": "b46db4884446e605e440059066abe63e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pengaturan\\presentation\\pengaturan_page.dart": {
+    "mtime": 1786973042.2234313,
+    "ast_hash": "8dd52c4970a90c29649302127c35be99",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\pesanan_page.dart": {
+    "mtime": 1786973029.7058704,
+    "ast_hash": "ba683e2a061088ac5beda21f2d9b0d98",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\produk\\presentation\\produk_page.dart": {
+    "mtime": 1786973024.907764,
+    "ast_hash": "e7c40fca839124d172e96cd3a5082863",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\sesi_meja\\presentation\\sesi_meja_page.dart": {
+    "mtime": 1786973016.532067,
+    "ast_hash": "3bc8414c6f4fc20e16835557fe55d9aa",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\shared\\widgets\\app_responsive_layout.dart": {
+    "mtime": 1786974690.6285849,
+    "ast_hash": "debd3afd71adac040f0d5238d47e2e00",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\supabase\\schema.sql": {
+    "mtime": 1786974628.9319313,
+    "ast_hash": "02bcba40eca369d647f154a93e8ad1c6",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\currency_formatter_test.dart": {
+    "mtime": 1786973075.4483857,
+    "ast_hash": "4f0262a1a9d4580009a3f35bd16d4fb2",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\widget_test.dart": {
+    "mtime": 1786973266.0520341,
+    "ast_hash": "e5aa5531b7ce4652e427c00922d3d295",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\manifest.json": {
+    "mtime": 1786972853.7850049,
+    "ast_hash": "3b11a82999ff4897ceb2a6fdb73c854a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\generated_plugin_registrant.cc": {
+    "mtime": 1786974776.9130917,
+    "ast_hash": "8f827c92146e46fc11f4e794a498348b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\generated_plugin_registrant.h": {
+    "mtime": 1786974776.9082866,
+    "ast_hash": "0ea33875f9f8e118f9c2ded03e2e2835",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\flutter_export.h": {
+    "mtime": 1777216175.7727787,
+    "ast_hash": "51d6ddd086e800d34c1d143004c474fd",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\flutter_messenger.h": {
+    "mtime": 1777216175.7768884,
+    "ast_hash": "1f260d2566d323898cb90cf244a3f3b9",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\flutter_plugin_registrar.h": {
+    "mtime": 1777216175.7768884,
+    "ast_hash": "205b172dd4be89df08a835c5afcd2c1a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\flutter_texture_registrar.h": {
+    "mtime": 1777216175.7790258,
+    "ast_hash": "4ffbfcf8b88a9690e82543b1761e81d5",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\flutter_windows.h": {
+    "mtime": 1777216175.7747858,
+    "ast_hash": "1842ff1d6fbdafa3a713fe650050b9ce",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\binary_messenger_impl.h": {
+    "mtime": 1777216179.3571742,
+    "ast_hash": "286e55d651260380486c1ca7a2c44578",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\byte_buffer_streams.h": {
+    "mtime": 1777216179.361321,
+    "ast_hash": "0a33501e8af56a1390ab6f75e0f568d9",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\core_implementations.cc": {
+    "mtime": 1777216179.117269,
+    "ast_hash": "91cfe8e97858850acdbc8891453ce5bc",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\engine_method_result.cc": {
+    "mtime": 1777216179.1191332,
+    "ast_hash": "6172a3effcf1f354d756ff757377a576",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\flutter_engine.cc": {
+    "mtime": 1777216179.142443,
+    "ast_hash": "14c8cef2644702b8be3330109e5756a6",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\flutter_view_controller.cc": {
+    "mtime": 1777216179.162716,
+    "ast_hash": "3c4959653a59ba03164e211059dc2652",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\plugin_registrar.cc": {
+    "mtime": 1777216179.1226583,
+    "ast_hash": "3190b92da7033c643bf749e7f4266da8",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\standard_codec.cc": {
+    "mtime": 1777216179.1337445,
+    "ast_hash": "035f8af9a9a084e129ceef3fa0396c47",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\texture_registrar_impl.h": {
+    "mtime": 1777216179.3633232,
+    "ast_hash": "7ec35caedbfe35b37bd7aa66dab7219b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\basic_message_channel.h": {
+    "mtime": 1777216179.1956491,
+    "ast_hash": "45dd070af12cc7ab125d6ead5267f36c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\binary_messenger.h": {
+    "mtime": 1777216179.2008796,
+    "ast_hash": "33562e00fd62a55bd23deeecf3a69a51",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\byte_streams.h": {
+    "mtime": 1777216179.208628,
+    "ast_hash": "00010cc0042e98ea973f4037a29a3ca0",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\dart_project.h": {
+    "mtime": 1777216179.381732,
+    "ast_hash": "21a40fe4d1f98493dd01865fc200d152",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\encodable_value.h": {
+    "mtime": 1777216179.2136278,
+    "ast_hash": "e0fc1e9a30ec6781d067bd0de82fc9b8",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\engine_method_result.h": {
+    "mtime": 1777216179.2195616,
+    "ast_hash": "55b4be5728dfb16220b1bda5bdace3fe",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\event_channel.h": {
+    "mtime": 1777216179.2271743,
+    "ast_hash": "143cf6f0acaa229d950d084c940cc77c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\event_sink.h": {
+    "mtime": 1777216179.2302587,
+    "ast_hash": "b1b98c1cf40abd6a3c308182c4822476",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\event_stream_handler.h": {
+    "mtime": 1777216179.2375803,
+    "ast_hash": "62be5ae665a6b931d6dc9ac4b27d6c93",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\event_stream_handler_functions.h": {
+    "mtime": 1777216179.2317712,
+    "ast_hash": "352934c6d322aed89115cb0491d8a640",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\flutter_engine.h": {
+    "mtime": 1777216179.3862758,
+    "ast_hash": "2b2405abfa2cc54351b6ee6ad02585c0",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\flutter_view.h": {
+    "mtime": 1777216179.396518,
+    "ast_hash": "33a6baf4984ec4c299c0b05cef6968ed",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\flutter_view_controller.h": {
+    "mtime": 1777216179.3943226,
+    "ast_hash": "815f4a5fbad9381269e2c216507285cd",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\message_codec.h": {
+    "mtime": 1777216179.2474067,
+    "ast_hash": "b5013c9553dc459d5f91b8ec2bda3d0a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\method_call.h": {
+    "mtime": 1777216179.258772,
+    "ast_hash": "a47afe801378afeffda4439e8cdb01ca",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\method_channel.h": {
+    "mtime": 1777216179.2608912,
+    "ast_hash": "f1aaf4136d19cc505c7227593e5c55ec",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\method_codec.h": {
+    "mtime": 1777216179.2629013,
+    "ast_hash": "1d712b93e2dd2e28cb67a55a8d484694",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\method_result.h": {
+    "mtime": 1777216179.2979317,
+    "ast_hash": "e48c7b84b470630e810b6a0bc2d8e542",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\method_result_functions.h": {
+    "mtime": 1777216179.2850988,
+    "ast_hash": "905e12401a76409626fc3b93d3ca4256",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\plugin_registrar.h": {
+    "mtime": 1777216179.3034587,
+    "ast_hash": "2b81addd18be801eda539f1de332ce4e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\plugin_registrar_windows.h": {
+    "mtime": 1777216179.3985362,
+    "ast_hash": "0bbbe470228d787a92d567a95faa2b33",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\plugin_registry.h": {
+    "mtime": 1777216179.3049715,
+    "ast_hash": "85c5071ca77f8687102dcae4f282388b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\standard_codec_serializer.h": {
+    "mtime": 1777216179.307817,
+    "ast_hash": "09399c3c509a601a970f6efd340a2529",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\standard_message_codec.h": {
+    "mtime": 1777216179.318007,
+    "ast_hash": "81df344828c7c48155ae22824eb61e50",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\standard_method_codec.h": {
+    "mtime": 1777216179.3273623,
+    "ast_hash": "4707587e759b2b655852fc0e989c9e70",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\ephemeral\\cpp_client_wrapper\\include\\flutter\\texture_registrar.h": {
+    "mtime": 1777216179.3366854,
+    "ast_hash": "ee739ab16ee0e2964edc9275a0379095",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\flutter_window.cpp": {
+    "mtime": 1753798129.330495,
+    "ast_hash": "2f463f9b7da67a2d692a012f9ea85e0c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\flutter_window.h": {
+    "mtime": 1753798129.330495,
+    "ast_hash": "7defcc89d4a26d56e801241d624d48fb",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\main.cpp": {
+    "mtime": 1786972854.1097298,
+    "ast_hash": "9074f387e8899da91de6bc52b71a65b3",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\resource.h": {
+    "mtime": 1753798129.3350072,
+    "ast_hash": "1ade5dd15e613479a15e8832ed276f2b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\utils.cpp": {
+    "mtime": 1753798129.3350072,
+    "ast_hash": "432461b09d862a2f8dadf380ff0e34e5",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\utils.h": {
+    "mtime": 1753798129.3393803,
+    "ast_hash": "fd81e143f5614eb6fd75efe539002853",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\win32_window.cpp": {
+    "mtime": 1753798129.3393803,
+    "ast_hash": "571eb8234dbc2661be03aa5f2a4d2fca",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\win32_window.h": {
+    "mtime": 1753798129.341133,
+    "ast_hash": "7569387d58711ab975940f4df3b4bcda",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\analysis_options.yaml": {
+    "mtime": 1786972851.9326758,
+    "ast_hash": "9e65f4b9beebb674c0dc252f70a5c177",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\pubspec.yaml": {
+    "mtime": 1786972911.213072,
+    "ast_hash": "c251785b0c05866afe1438d524288c75",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\README.md": {
+    "mtime": 1786972853.2984407,
+    "ast_hash": "349056221d2f8e46b570b483451d3680",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\.agents\\rules\\graphify.md": {
+    "mtime": 1786974286.4053643,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\.agents\\workflows\\graphify.md": {
+    "mtime": 1786974286.4103997,
+    "ast_hash": "84de69efd46ab0b8430393bd4188f8f2",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\index.html": {
+    "mtime": 1786972853.7425897,
+    "ast_hash": "802efc3a633604bbc5feb146a4531e0d",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\CMakeLists.txt": {
+    "mtime": 1786972853.883698,
+    "ast_hash": "cdd86ffca83ff792a3b1c6326313ddf0",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\flutter\\CMakeLists.txt": {
+    "mtime": 1753798129.3259394,
+    "ast_hash": "bbf66fed5180bd9ae8198b8d7c4a0001",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\windows\\runner\\CMakeLists.txt": {
+    "mtime": 1753798129.330495,
+    "ast_hash": "028602ab9754bffe716659ada7590d29",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png": {
+    "mtime": 1753798129.1792698,
+    "ast_hash": "13e9c72ec37fac220397aa819fa1ef2d",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png": {
+    "mtime": 1753798129.1812994,
+    "ast_hash": "6270344430679711b81476e29878caa7",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png": {
+    "mtime": 1753798129.1812994,
+    "ast_hash": "a0a8db5985280b3679d99a820ae2db79",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png": {
+    "mtime": 1753798129.1812994,
+    "ast_hash": "afe1b655b9f32da22f9a4301bb8e6ba8",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png": {
+    "mtime": 1753798129.1869805,
+    "ast_hash": "57838d52c318faff743130c3fcfae0c6",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\favicon.png": {
+    "mtime": 1753798129.3091486,
+    "ast_hash": "5dcef449791fa27946b3d35ad8803796",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\icons\\Icon-192.png": {
+    "mtime": 1753798129.3091486,
+    "ast_hash": "ac9a721a12bbc803b44f645561ecb1e1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\icons\\Icon-512.png": {
+    "mtime": 1753798129.3124475,
+    "ast_hash": "96e752610906ba2a93c65f8abe1645f1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\icons\\Icon-maskable-192.png": {
+    "mtime": 1753798227.4545262,
+    "ast_hash": "c457ef57daa1d16f64b27b786ec2ea3c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\web\\icons\\Icon-maskable-512.png": {
+    "mtime": 1753798227.439455,
+    "ast_hash": "301a7604d45b3e739efc881eb04896ea",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\data\\auth_repository.dart": {
+    "mtime": 1786974651.6316109,
+    "ast_hash": "5936776b3133f7149ff319ce46296a94",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\domain\\auth_state.dart": {
+    "mtime": 1786974643.7507694,
+    "ast_hash": "ee1e1b0eacd552400858707ef7b08a5a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\domain\\user_profile.dart": {
+    "mtime": 1786974633.986619,
+    "ast_hash": "01e645a45008a6c5e382494f851f982b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\presentation\\auth_provider.dart": {
+    "mtime": 1786974852.5701542,
+    "ast_hash": "33819adbcabadd9cc208228d9a9cf920",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\autentikasi\\presentation\\user_profile_provider.dart": {
+    "mtime": 1786974660.3079274,
+    "ast_hash": "ab3a3c7cb2751c45d22d1c2dfd24a02d",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\kafe\\domain\\cafe_model.dart": {
+    "mtime": 1786974638.9692261,
+    "ast_hash": "fa3c214fc1d45a07312feed5d43363aa",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\kafe\\presentation\\active_cafe_provider.dart": {
+    "mtime": 1786974665.0631878,
+    "ast_hash": "741f8281e32d3097fddb7aae01db709e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\kafe\\presentation\\pilih_kafe_page.dart": {
+    "mtime": 1786974837.154233,
+    "ast_hash": "3facf0d2ead1ba7158363ad37dc255a1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\supabase\\full_setup.sql": {
+    "mtime": 1786976045.2648115,
+    "ast_hash": "abb2e847fd4b2279a7750f0f872da473",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\supabase\\seed.sql": {
+    "mtime": 1786975069.5736709,
+    "ast_hash": "c5abbb465c25d51c14de6ce570657e92",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\auth_repository_test.dart": {
+    "mtime": 1786974710.2700171,
+    "ast_hash": "596418c9caba4d17015fb90c86ad9e20",
+    "semantic_hash": ""
+  }
+}

@@ -1,7 +1,6 @@
 -- ====================================================================
--- SKEMA DATABASE CAFEFLOW (SUPABASE POSTGRESQL)
--- Standard Production-Grade Schema
--- Aturan Wajib: Prefix `data_`, Bahasa Indonesia, UUID PK, RLS Enabled
+-- FULL SETUP DATABASE CAFEFLOW (PRODUCTION-GRADE SCHEMA + AUTOMATIC USER TRIGGER)
+-- Jalankan di Supabase Dashboard -> SQL Editor
 -- ====================================================================
 
 -- Extension untuk UUID
@@ -30,9 +29,15 @@ CREATE TABLE IF NOT EXISTS data_kafe (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+DROP TRIGGER IF EXISTS trg_data_kafe_diubah_pada ON data_kafe;
 CREATE TRIGGER trg_data_kafe_diubah_pada
 BEFORE UPDATE ON data_kafe
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
+
+-- Inisialisasi Kafe Default jika belum ada
+INSERT INTO data_kafe (nama_kafe, alamat, nomor_telepon, email_kafe)
+VALUES ('CafeFlow Central', 'Jl. Sudirman No. 1, Jakarta Pusat', '081234567890', 'central@cafeflow.com')
+ON CONFLICT DO NOTHING;
 
 -- ====================================================================
 -- TABEL: data_pengguna (Terhubung ke auth.users Supabase)
@@ -48,7 +53,8 @@ CREATE TABLE IF NOT EXISTS data_pengguna (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_pengguna_kafe ON data_pengguna(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_pengguna_kafe ON data_pengguna(id_kafe);
+DROP TRIGGER IF EXISTS trg_data_pengguna_diubah_pada ON data_pengguna;
 CREATE TRIGGER trg_data_pengguna_diubah_pada
 BEFORE UPDATE ON data_pengguna
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -67,8 +73,9 @@ CREATE TABLE IF NOT EXISTS data_pegawai_kafe (
     UNIQUE (id_pengguna, id_kafe)
 );
 
-CREATE INDEX idx_data_pegawai_kafe_pengguna ON data_pegawai_kafe(id_pengguna);
-CREATE INDEX idx_data_pegawai_kafe_kafe ON data_pegawai_kafe(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_pegawai_kafe_pengguna ON data_pegawai_kafe(id_pengguna);
+CREATE INDEX IF NOT EXISTS idx_data_pegawai_kafe_kafe ON data_pegawai_kafe(id_kafe);
+DROP TRIGGER IF EXISTS trg_data_pegawai_kafe_diubah_pada ON data_pegawai_kafe;
 CREATE TRIGGER trg_data_pegawai_kafe_diubah_pada
 BEFORE UPDATE ON data_pegawai_kafe
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -88,8 +95,9 @@ CREATE TABLE IF NOT EXISTS data_meja (
     UNIQUE (id_kafe, nomor_meja)
 );
 
-CREATE INDEX idx_data_meja_kafe ON data_meja(id_kafe);
-CREATE INDEX idx_data_meja_status ON data_meja(status_meja);
+CREATE INDEX IF NOT EXISTS idx_data_meja_kafe ON data_meja(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_meja_status ON data_meja(status_meja);
+DROP TRIGGER IF EXISTS trg_data_meja_diubah_pada ON data_meja;
 CREATE TRIGGER trg_data_meja_diubah_pada
 BEFORE UPDATE ON data_meja
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -107,7 +115,7 @@ CREATE TABLE IF NOT EXISTS data_pelanggan (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_pelanggan_kafe ON data_pelanggan(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_pelanggan_kafe ON data_pelanggan(id_kafe);
 
 -- ====================================================================
 -- TABEL: data_aturan_waktu
@@ -123,12 +131,10 @@ CREATE TABLE IF NOT EXISTS data_aturan_waktu (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_aturan_waktu_kafe ON data_aturan_waktu(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_aturan_waktu_kafe ON data_aturan_waktu(id_kafe);
 
 -- ====================================================================
 -- TABEL: data_sesi_meja
--- Catatan: Countdown dihitung secara lokal oleh Flutter. 
--- Database hanya menyimpan waktu_mulai dan waktu_berakhir.
 -- ====================================================================
 CREATE TABLE IF NOT EXISTS data_sesi_meja (
     id_sesi_meja UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -144,9 +150,10 @@ CREATE TABLE IF NOT EXISTS data_sesi_meja (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_sesi_meja_kafe ON data_sesi_meja(id_kafe);
-CREATE INDEX idx_data_sesi_meja_meja ON data_sesi_meja(id_meja);
-CREATE INDEX idx_data_sesi_meja_status ON data_sesi_meja(status_sesi);
+CREATE INDEX IF NOT EXISTS idx_data_sesi_meja_kafe ON data_sesi_meja(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_sesi_meja_meja ON data_sesi_meja(id_meja);
+CREATE INDEX IF NOT EXISTS idx_data_sesi_meja_status ON data_sesi_meja(status_sesi);
+DROP TRIGGER IF EXISTS trg_data_sesi_meja_diubah_pada ON data_sesi_meja;
 CREATE TRIGGER trg_data_sesi_meja_diubah_pada
 BEFORE UPDATE ON data_sesi_meja
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -166,7 +173,8 @@ CREATE TABLE IF NOT EXISTS data_produk (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_produk_kafe ON data_produk(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_produk_kafe ON data_produk(id_kafe);
+DROP TRIGGER IF EXISTS trg_data_produk_diubah_pada ON data_produk;
 CREATE TRIGGER trg_data_produk_diubah_pada
 BEFORE UPDATE ON data_produk
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -187,8 +195,9 @@ CREATE TABLE IF NOT EXISTS data_pesanan (
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_pesanan_kafe ON data_pesanan(id_kafe);
-CREATE INDEX idx_data_pesanan_sesi ON data_pesanan(id_sesi_meja);
+CREATE INDEX IF NOT EXISTS idx_data_pesanan_kafe ON data_pesanan(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_pesanan_sesi ON data_pesanan(id_sesi_meja);
+DROP TRIGGER IF EXISTS trg_data_pesanan_diubah_pada ON data_pesanan;
 CREATE TRIGGER trg_data_pesanan_diubah_pada
 BEFORE UPDATE ON data_pesanan
 FOR EACH ROW EXECUTE FUNCTION perbarui_diubah_pada();
@@ -207,7 +216,7 @@ CREATE TABLE IF NOT EXISTS data_detail_pesanan (
     dibuat_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_detail_pesanan_pesanan ON data_detail_pesanan(id_pesanan);
+CREATE INDEX IF NOT EXISTS idx_detail_pesanan_pesanan ON data_detail_pesanan(id_pesanan);
 
 -- ====================================================================
 -- TABEL: data_notifikasi
@@ -223,7 +232,7 @@ CREATE TABLE IF NOT EXISTS data_notifikasi (
     dibuat_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_notifikasi_kafe ON data_notifikasi(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_notifikasi_kafe ON data_notifikasi(id_kafe);
 
 -- ====================================================================
 -- TABEL: data_log_aktivitas
@@ -238,7 +247,7 @@ CREATE TABLE IF NOT EXISTS data_log_aktivitas (
     dibuat_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_data_log_kafe ON data_log_aktivitas(id_kafe);
+CREATE INDEX IF NOT EXISTS idx_data_log_kafe ON data_log_aktivitas(id_kafe);
 
 -- ====================================================================
 -- ROW LEVEL SECURITY (RLS) POLICIES
@@ -256,7 +265,16 @@ ALTER TABLE data_detail_pesanan ENABLE ROW LEVEL SECURITY;
 ALTER TABLE data_notifikasi ENABLE ROW LEVEL SECURITY;
 ALTER TABLE data_log_aktivitas ENABLE ROW LEVEL SECURITY;
 
--- Policy RLS Pengguna Terautentikasi (Akses Berdasarkan id_kafe & data_pegawai_kafe)
+-- Reset policies untuk menghindari duplikasi
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat membaca data kafe mereka" ON data_kafe;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat membaca data pengguna satu kafe" ON data_pengguna;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat membaca relasi pegawai kafe mereka" ON data_pegawai_kafe;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat mengelola data meja kafe mereka" ON data_meja;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat mengelola data sesi meja kafe mereka" ON data_sesi_meja;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat mengelola data produk kafe mereka" ON data_produk;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat mengelola data pesanan kafe mereka" ON data_pesanan;
+DROP POLICY IF EXISTS "Pengguna terautentikasi dapat mengelola detail pesanan kafe mereka" ON data_detail_pesanan;
+
 CREATE POLICY "Pengguna terautentikasi dapat membaca data kafe mereka" ON data_kafe
     FOR SELECT TO authenticated
     USING (id_kafe IN (
@@ -307,3 +325,41 @@ CREATE POLICY "Pengguna terautentikasi dapat mengelola detail pesanan kafe merek
             SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
         )
     ));
+
+-- ====================================================================
+-- FUNGSI & TRIGGER OTOMATIS SAAT USER DIBUAT DI SUPABASE AUTH UI/API
+-- ====================================================================
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER AS $$
+DECLARE
+    v_kafe_id UUID;
+BEGIN
+    -- Ambil kafe pertama jika ada
+    SELECT id_kafe INTO v_kafe_id FROM public.data_kafe LIMIT 1;
+    
+    -- Insert otomatis ke data_pengguna
+    INSERT INTO public.data_pengguna (id_pengguna, id_kafe, nama_lengkap, email, peran)
+    VALUES (
+        NEW.id,
+        v_kafe_id,
+        COALESCE(NEW.raw_user_meta_data->>'nama_lengkap', SPLIT_PART(NEW.email, '@', 1)),
+        NEW.email,
+        'pemilik'
+    ) ON CONFLICT (id_pengguna) DO UPDATE SET
+        id_kafe = EXCLUDED.id_kafe;
+
+    -- Insert otomatis ke data_pegawai_kafe
+    IF v_kafe_id IS NOT NULL THEN
+        INSERT INTO public.data_pegawai_kafe (id_pengguna, id_kafe, peran)
+        VALUES (NEW.id, v_kafe_id, 'pemilik')
+        ON CONFLICT (id_pengguna, id_kafe) DO NOTHING;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+CREATE TRIGGER on_auth_user_created
+AFTER INSERT ON auth.users
+FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();

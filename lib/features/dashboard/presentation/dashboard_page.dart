@@ -117,13 +117,13 @@ class DashboardPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: theme.colorScheme.surface,
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: theme.colorScheme.outline.withOpacity(0.3)),
+                      border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.3)),
                     ),
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.dashboard_customize_outlined, size: 40, color: theme.colorScheme.primary.withOpacity(0.5)),
+                          Icon(Icons.dashboard_customize_outlined, size: 40, color: theme.colorScheme.primary.withValues(alpha: 0.5)),
                           const SizedBox(height: 12),
                           const Text(
                             'Modul Manajemen Meja & Sesi Waktu Siap Digunakan',
@@ -187,7 +187,7 @@ class _MetricCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: iconColor.withOpacity(0.1),
+                    color: iconColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(icon, size: 18, color: iconColor),

@@ -8,7 +8,7 @@ import 'core/config/supabase_config.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Inisialisasi Supabase dengan penanganan aman
+  // Inisialisasi Supabase secara aman
   await SupabaseConfig.initialize();
 
   runApp(
@@ -18,18 +18,20 @@ void main() async {
   );
 }
 
-class CafeFlowApp extends StatelessWidget {
+class CafeFlowApp extends ConsumerWidget {
   const CafeFlowApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(appRouterProvider);
+
     return MaterialApp.router(
       title: 'CafeFlow - Comfort Time Cafe System',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      routerConfig: AppRouter.router,
+      routerConfig: router,
     );
   }
 }

@@ -20,6 +20,7 @@ class SupabaseConfig {
     if (supabaseUrl.isNotEmpty && supabaseAnonKey.isNotEmpty && !supabaseUrl.contains('placeholder')) {
       await Supabase.initialize(
         url: supabaseUrl,
+        // ignore: deprecated_member_use
         anonKey: supabaseAnonKey,
         debug: kDebugMode,
       );
