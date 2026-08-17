@@ -1129,15 +1129,6 @@
       "norm_label": "container"
     },
     {
-      "label": "Divider",
-      "file_type": "code",
-      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
-      "source_location": null,
-      "id": "presentation_dashboard_page_divider",
-      "community": 14,
-      "norm_label": "divider"
-    },
-    {
       "label": "_getVisualConfig",
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
@@ -1214,7 +1205,7 @@
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
       "source_location": null,
-      "id": "core_utils_currency_formatter_dart",
+      "id": "lib_features_dashboard_presentation_dashboard_page_dart_core_utils_currency_formatter_dart",
       "community": 14,
       "norm_label": "../../../core/utils/currency_formatter.dart"
     },
@@ -1322,7 +1313,7 @@
       "file_type": "code",
       "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
       "source_location": null,
-      "id": "meja_presentation_meja_provider_dart",
+      "id": "lib_features_dashboard_presentation_dashboard_provider_dart_meja_presentation_meja_provider_dart",
       "community": 48,
       "norm_label": "../../meja/presentation/meja_provider.dart"
     },
@@ -2389,6 +2380,87 @@
       "norm_label": "package:flutter/material.dart"
     },
     {
+      "label": "pesanan_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_data_pesanan_repository_dart",
+      "community": 64,
+      "norm_label": "pesanan_repository.dart"
+    },
+    {
+      "label": "PesananRepository",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "data_pesanan_repository_pesananrepository",
+      "community": 64,
+      "norm_label": "pesananrepository"
+    },
+    {
+      "label": "package:flutter/foundation.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_data_pesanan_repository_dart_package_flutter_foundation_dart",
+      "community": 64,
+      "norm_label": "package:flutter/foundation.dart"
+    },
+    {
+      "label": "package:supabase_flutter/supabase_flutter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_data_pesanan_repository_dart_package_supabase_flutter_supabase_flutter_dart",
+      "community": 64,
+      "norm_label": "package:supabase_flutter/supabase_flutter.dart"
+    },
+    {
+      "label": "../domain/pesanan_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_data_pesanan_repository_dart_domain_pesanan_model_dart",
+      "community": 64,
+      "norm_label": "../domain/pesanan_model.dart"
+    },
+    {
+      "label": "../../../core/config/supabase_config.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_data_pesanan_repository_dart_core_config_supabase_config_dart",
+      "community": 64,
+      "norm_label": "../../../core/config/supabase_config.dart"
+    },
+    {
+      "label": "pesanan_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/domain/pesanan_model.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_domain_pesanan_model_dart",
+      "community": 67,
+      "norm_label": "pesanan_model.dart"
+    },
+    {
+      "label": "DetailPesananModel",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/domain/pesanan_model.dart",
+      "source_location": null,
+      "id": "domain_pesanan_model_detailpesananmodel",
+      "community": 67,
+      "norm_label": "detailpesananmodel"
+    },
+    {
+      "label": "PesananModel",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/domain/pesanan_model.dart",
+      "source_location": null,
+      "id": "domain_pesanan_model_pesananmodel",
+      "community": 67,
+      "norm_label": "pesananmodel"
+    },
+    {
       "label": "pesanan_page.dart",
       "file_type": "code",
       "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
@@ -2407,6 +2479,24 @@
       "norm_label": "pesananpage"
     },
     {
+      "label": "_showBuatPesananModal",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_showbuatpesananmodal",
+      "community": 20,
+      "norm_label": "_showbuatpesananmodal"
+    },
+    {
+      "label": "_showStrukDialog",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_showstrukdialog",
+      "community": 20,
+      "norm_label": "_showstrukdialog"
+    },
+    {
       "label": "build",
       "file_type": "code",
       "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
@@ -2416,13 +2506,13 @@
       "norm_label": "build"
     },
     {
-      "label": "Padding",
+      "label": "Scaffold",
       "file_type": "code",
       "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
       "source_location": null,
-      "id": "presentation_pesanan_page_padding",
+      "id": "presentation_pesanan_page_scaffold",
       "community": 20,
-      "norm_label": "padding"
+      "norm_label": "scaffold"
     },
     {
       "label": "SizedBox",
@@ -2434,6 +2524,33 @@
       "norm_label": "sizedbox"
     },
     {
+      "label": "Icon",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_icon",
+      "community": 20,
+      "norm_label": "icon"
+    },
+    {
+      "label": "Spacer",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_spacer",
+      "community": 20,
+      "norm_label": "spacer"
+    },
+    {
+      "label": "Center",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_center",
+      "community": 20,
+      "norm_label": "center"
+    },
+    {
       "label": "Text",
       "file_type": "code",
       "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
@@ -2443,6 +2560,24 @@
       "norm_label": "text"
     },
     {
+      "label": "SingleChildScrollView",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_singlechildscrollview",
+      "community": 20,
+      "norm_label": "singlechildscrollview"
+    },
+    {
+      "label": "DataRow",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "presentation_pesanan_page_datarow",
+      "community": 20,
+      "norm_label": "datarow"
+    },
+    {
       "label": "package:flutter/material.dart",
       "file_type": "code",
       "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
@@ -2450,6 +2585,618 @@
       "id": "lib_features_pesanan_presentation_pesanan_page_dart_package_flutter_material_dart",
       "community": 20,
       "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 20,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "package:intl/intl.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_package_intl_intl_dart",
+      "community": 20,
+      "norm_label": "package:intl/intl.dart"
+    },
+    {
+      "label": "pos_cart_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_pos_cart_provider_dart",
+      "community": 20,
+      "norm_label": "pos_cart_provider.dart"
+    },
+    {
+      "label": "dialogs/buat_pesanan_modal.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_dart",
+      "community": 20,
+      "norm_label": "dialogs/buat_pesanan_modal.dart"
+    },
+    {
+      "label": "dialogs/struk_pesanan_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_dart",
+      "community": 20,
+      "norm_label": "dialogs/struk_pesanan_dialog.dart"
+    },
+    {
+      "label": "../domain/pesanan_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_domain_pesanan_model_dart",
+      "community": 20,
+      "norm_label": "../domain/pesanan_model.dart"
+    },
+    {
+      "label": "../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_core_utils_currency_formatter_dart",
+      "community": 20,
+      "norm_label": "../../../core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pesanan_page_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 20,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "pos_cart_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "community": 59,
+      "norm_label": "pos_cart_provider.dart"
+    },
+    {
+      "label": "CartItem",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_cartitem",
+      "community": 59,
+      "norm_label": "cartitem"
+    },
+    {
+      "label": "PosCartState",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_poscartstate",
+      "community": 59,
+      "norm_label": "poscartstate"
+    },
+    {
+      "label": "PosCartNotifier",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_poscartnotifier",
+      "community": 59,
+      "norm_label": "poscartnotifier"
+    },
+    {
+      "label": "PesananRepository",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_pesananrepository",
+      "community": 59,
+      "norm_label": "pesananrepository"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_copywith",
+      "community": 59,
+      "norm_label": "copywith"
+    },
+    {
+      "label": "selectMeja",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_selectmeja",
+      "community": 59,
+      "norm_label": "selectmeja"
+    },
+    {
+      "label": "addItem",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_additem",
+      "community": 59,
+      "norm_label": "additem"
+    },
+    {
+      "label": "removeItem",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_removeitem",
+      "community": 59,
+      "norm_label": "removeitem"
+    },
+    {
+      "label": "updateQuantity",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_updatequantity",
+      "community": 59,
+      "norm_label": "updatequantity"
+    },
+    {
+      "label": "updateCatatan",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_updatecatatan",
+      "community": 59,
+      "norm_label": "updatecatatan"
+    },
+    {
+      "label": "resetCart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_resetcart",
+      "community": 59,
+      "norm_label": "resetcart"
+    },
+    {
+      "label": "DetailPesananModel",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "presentation_pos_cart_provider_detailpesananmodel",
+      "community": 59,
+      "norm_label": "detailpesananmodel"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pos_cart_provider_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 59,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../data/pesanan_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "data_pesanan_repository_dart",
+      "community": 59,
+      "norm_label": "../data/pesanan_repository.dart"
+    },
+    {
+      "label": "../domain/pesanan_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pos_cart_provider_dart_domain_pesanan_model_dart",
+      "community": 59,
+      "norm_label": "../domain/pesanan_model.dart"
+    },
+    {
+      "label": "../../produk/domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "produk_domain_produk_model_dart",
+      "community": 59,
+      "norm_label": "../../produk/domain/produk_model.dart"
+    },
+    {
+      "label": "../../meja/domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pos_cart_provider_dart_meja_domain_meja_model_dart",
+      "community": 59,
+      "norm_label": "../../meja/domain/meja_model.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_pos_cart_provider_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 59,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "buat_pesanan_modal.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "community": 6,
+      "norm_label": "buat_pesanan_modal.dart"
+    },
+    {
+      "label": "BuatPesananModal",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_buatpesananmodal",
+      "community": 6,
+      "norm_label": "buatpesananmodal"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_build",
+      "community": 6,
+      "norm_label": "build"
+    },
+    {
+      "label": "Dialog",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_dialog",
+      "community": 6,
+      "norm_label": "dialog"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_sizedbox",
+      "community": 6,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "Spacer",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_spacer",
+      "community": 6,
+      "norm_label": "spacer"
+    },
+    {
+      "label": "DropdownMenuItem",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_dropdownmenuitem",
+      "community": 6,
+      "norm_label": "dropdownmenuitem"
+    },
+    {
+      "label": "Card",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_card",
+      "community": 6,
+      "norm_label": "card"
+    },
+    {
+      "label": "VerticalDivider",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_verticaldivider",
+      "community": 6,
+      "norm_label": "verticaldivider"
+    },
+    {
+      "label": "Icon",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_icon",
+      "community": 6,
+      "norm_label": "icon"
+    },
+    {
+      "label": "Container",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_container",
+      "community": 6,
+      "norm_label": "container"
+    },
+    {
+      "label": "Text",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "dialogs_buat_pesanan_modal_text",
+      "community": 6,
+      "norm_label": "text"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_package_flutter_material_dart",
+      "community": 6,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 6,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../pos_cart_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_pos_cart_provider_dart",
+      "community": 6,
+      "norm_label": "../pos_cart_provider.dart"
+    },
+    {
+      "label": "struk_pesanan_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "struk_pesanan_dialog_dart",
+      "community": 6,
+      "norm_label": "struk_pesanan_dialog.dart"
+    },
+    {
+      "label": "../../../produk/presentation/produk_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "produk_presentation_produk_provider_dart",
+      "community": 6,
+      "norm_label": "../../../produk/presentation/produk_provider.dart"
+    },
+    {
+      "label": "../../../meja/presentation/meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_meja_presentation_meja_provider_dart",
+      "community": 6,
+      "norm_label": "../../../meja/presentation/meja_provider.dart"
+    },
+    {
+      "label": "../../../meja/domain/meja_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_meja_domain_meja_model_dart",
+      "community": 6,
+      "norm_label": "../../../meja/domain/meja_model.dart"
+    },
+    {
+      "label": "../../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 6,
+      "norm_label": "../../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "../../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_core_utils_currency_formatter_dart",
+      "community": 6,
+      "norm_label": "../../../../core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "struk_pesanan_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "community": 63,
+      "norm_label": "struk_pesanan_dialog.dart"
+    },
+    {
+      "label": "StrukPesananDialog",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_strukpesanandialog",
+      "community": 63,
+      "norm_label": "strukpesanandialog"
+    },
+    {
+      "label": "_ReceiptRow",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_receiptrow",
+      "community": 63,
+      "norm_label": "_receiptrow"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_build",
+      "community": 63,
+      "norm_label": "build"
+    },
+    {
+      "label": "Dialog",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_dialog",
+      "community": 63,
+      "norm_label": "dialog"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_sizedbox",
+      "community": 63,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "Divider",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_divider",
+      "community": 63,
+      "norm_label": "divider"
+    },
+    {
+      "label": "Row",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_struk_pesanan_dialog_row",
+      "community": 63,
+      "norm_label": "row"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_package_flutter_material_dart",
+      "community": 63,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:intl/intl.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_package_intl_intl_dart",
+      "community": 63,
+      "norm_label": "package:intl/intl.dart"
+    },
+    {
+      "label": "../../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_core_utils_currency_formatter_dart",
+      "community": 63,
+      "norm_label": "../../../../core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "produk_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "lib_features_produk_data_produk_repository_dart",
+      "community": 65,
+      "norm_label": "produk_repository.dart"
+    },
+    {
+      "label": "ProdukRepository",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "data_produk_repository_produkrepository",
+      "community": 65,
+      "norm_label": "produkrepository"
+    },
+    {
+      "label": "package:flutter/foundation.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "lib_features_produk_data_produk_repository_dart_package_flutter_foundation_dart",
+      "community": 65,
+      "norm_label": "package:flutter/foundation.dart"
+    },
+    {
+      "label": "package:supabase_flutter/supabase_flutter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "lib_features_produk_data_produk_repository_dart_package_supabase_flutter_supabase_flutter_dart",
+      "community": 65,
+      "norm_label": "package:supabase_flutter/supabase_flutter.dart"
+    },
+    {
+      "label": "../domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "lib_features_produk_data_produk_repository_dart_domain_produk_model_dart",
+      "community": 65,
+      "norm_label": "../domain/produk_model.dart"
+    },
+    {
+      "label": "../../../core/config/supabase_config.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "id": "lib_features_produk_data_produk_repository_dart_core_config_supabase_config_dart",
+      "community": 65,
+      "norm_label": "../../../core/config/supabase_config.dart"
+    },
+    {
+      "label": "produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/domain/produk_model.dart",
+      "source_location": null,
+      "id": "lib_features_produk_domain_produk_model_dart",
+      "community": 68,
+      "norm_label": "produk_model.dart"
+    },
+    {
+      "label": "ProdukModel",
+      "file_type": "code",
+      "source_file": "lib/features/produk/domain/produk_model.dart",
+      "source_location": null,
+      "id": "domain_produk_model_produkmodel",
+      "community": 68,
+      "norm_label": "produkmodel"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "lib/features/produk/domain/produk_model.dart",
+      "source_location": null,
+      "id": "domain_produk_model_copywith",
+      "community": 68,
+      "norm_label": "copywith"
     },
     {
       "label": "produk_page.dart",
@@ -2470,6 +3217,24 @@
       "norm_label": "produkpage"
     },
     {
+      "label": "_showTambahProdukDialog",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "presentation_produk_page_showtambahprodukdialog",
+      "community": 21,
+      "norm_label": "_showtambahprodukdialog"
+    },
+    {
+      "label": "_showEditProdukDialog",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "presentation_produk_page_showeditprodukdialog",
+      "community": 21,
+      "norm_label": "_showeditprodukdialog"
+    },
+    {
       "label": "build",
       "file_type": "code",
       "source_file": "lib/features/produk/presentation/produk_page.dart",
@@ -2479,13 +3244,13 @@
       "norm_label": "build"
     },
     {
-      "label": "Padding",
+      "label": "Scaffold",
       "file_type": "code",
       "source_file": "lib/features/produk/presentation/produk_page.dart",
       "source_location": null,
-      "id": "presentation_produk_page_padding",
+      "id": "presentation_produk_page_scaffold",
       "community": 21,
-      "norm_label": "padding"
+      "norm_label": "scaffold"
     },
     {
       "label": "SizedBox",
@@ -2506,6 +3271,15 @@
       "norm_label": "text"
     },
     {
+      "label": "DataRow",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "presentation_produk_page_datarow",
+      "community": 21,
+      "norm_label": "datarow"
+    },
+    {
       "label": "package:flutter/material.dart",
       "file_type": "code",
       "source_file": "lib/features/produk/presentation/produk_page.dart",
@@ -2513,6 +3287,285 @@
       "id": "lib_features_produk_presentation_produk_page_dart_package_flutter_material_dart",
       "community": 21,
       "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_page_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 21,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "produk_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_page_dart_produk_provider_dart",
+      "community": 21,
+      "norm_label": "produk_provider.dart"
+    },
+    {
+      "label": "dialogs/tambah_edit_produk_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_dart",
+      "community": 21,
+      "norm_label": "dialogs/tambah_edit_produk_dialog.dart"
+    },
+    {
+      "label": "../domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_page_dart_domain_produk_model_dart",
+      "community": 21,
+      "norm_label": "../domain/produk_model.dart"
+    },
+    {
+      "label": "../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_page_dart_core_utils_currency_formatter_dart",
+      "community": 21,
+      "norm_label": "../../../core/utils/currency_formatter.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_page_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 21,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "produk_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_provider_dart",
+      "community": 61,
+      "norm_label": "produk_provider.dart"
+    },
+    {
+      "label": "ProdukState",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_produkstate",
+      "community": 61,
+      "norm_label": "produkstate"
+    },
+    {
+      "label": "ProdukNotifier",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_produknotifier",
+      "community": 61,
+      "norm_label": "produknotifier"
+    },
+    {
+      "label": "ProdukRepository",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_produkrepository",
+      "community": 61,
+      "norm_label": "produkrepository"
+    },
+    {
+      "label": "copyWith",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_copywith",
+      "community": 61,
+      "norm_label": "copywith"
+    },
+    {
+      "label": "setSearchQuery",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_setsearchquery",
+      "community": 61,
+      "norm_label": "setsearchquery"
+    },
+    {
+      "label": "setKategori",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_setkategori",
+      "community": 61,
+      "norm_label": "setkategori"
+    },
+    {
+      "label": "loadProduk",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "presentation_produk_provider_loadproduk",
+      "community": 61,
+      "norm_label": "loadproduk"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_provider_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 61,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../data/produk_repository.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "data_produk_repository_dart",
+      "community": 61,
+      "norm_label": "../data/produk_repository.dart"
+    },
+    {
+      "label": "../domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_provider_dart_domain_produk_model_dart",
+      "community": 61,
+      "norm_label": "../domain/produk_model.dart"
+    },
+    {
+      "label": "../../kafe/presentation/active_cafe_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_produk_provider_dart_kafe_presentation_active_cafe_provider_dart",
+      "community": 61,
+      "norm_label": "../../kafe/presentation/active_cafe_provider.dart"
+    },
+    {
+      "label": "tambah_edit_produk_dialog.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "community": 60,
+      "norm_label": "tambah_edit_produk_dialog.dart"
+    },
+    {
+      "label": "TambahEditProdukDialog",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_tambaheditprodukdialog",
+      "community": 60,
+      "norm_label": "tambaheditprodukdialog"
+    },
+    {
+      "label": "_TambahEditProdukDialogState",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_tambaheditprodukdialogstate",
+      "community": 60,
+      "norm_label": "_tambaheditprodukdialogstate"
+    },
+    {
+      "label": "initState",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_initstate",
+      "community": 60,
+      "norm_label": "initstate"
+    },
+    {
+      "label": "dispose",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_dispose",
+      "community": 60,
+      "norm_label": "dispose"
+    },
+    {
+      "label": "SnackBar",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_snackbar",
+      "community": 60,
+      "norm_label": "snackbar"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_build",
+      "community": 60,
+      "norm_label": "build"
+    },
+    {
+      "label": "Dialog",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_dialog",
+      "community": 60,
+      "norm_label": "dialog"
+    },
+    {
+      "label": "SizedBox",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "dialogs_tambah_edit_produk_dialog_sizedbox",
+      "community": 60,
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "package:flutter/material.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_package_flutter_material_dart",
+      "community": 60,
+      "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:flutter_riverpod/flutter_riverpod.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart",
+      "community": 60,
+      "norm_label": "package:flutter_riverpod/flutter_riverpod.dart"
+    },
+    {
+      "label": "../../domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_domain_produk_model_dart",
+      "community": 60,
+      "norm_label": "../../domain/produk_model.dart"
+    },
+    {
+      "label": "../produk_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "id": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_produk_provider_dart",
+      "community": 60,
+      "norm_label": "../produk_provider.dart"
     },
     {
       "label": "sesi_meja_model.dart",
@@ -2893,6 +3946,51 @@
       "norm_label": "package:cafeflow/features/dashboard/presentation/dashboard_provider.dart"
     },
     {
+      "label": "pesanan_test.dart",
+      "file_type": "code",
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "id": "test_pesanan_test_dart",
+      "community": 66,
+      "norm_label": "pesanan_test.dart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "id": "test_pesanan_test_main",
+      "community": 66,
+      "norm_label": "main"
+    },
+    {
+      "label": "package:flutter_test/flutter_test.dart",
+      "file_type": "code",
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "id": "test_pesanan_test_dart_package_flutter_test_flutter_test_dart",
+      "community": 66,
+      "norm_label": "package:flutter_test/flutter_test.dart"
+    },
+    {
+      "label": "package:cafeflow/features/produk/domain/produk_model.dart",
+      "file_type": "code",
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "id": "package_cafeflow_features_produk_domain_produk_model_dart",
+      "community": 66,
+      "norm_label": "package:cafeflow/features/produk/domain/produk_model.dart"
+    },
+    {
+      "label": "package:cafeflow/features/pesanan/domain/pesanan_model.dart",
+      "file_type": "code",
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "id": "package_cafeflow_features_pesanan_domain_pesanan_model_dart",
+      "community": 66,
+      "norm_label": "package:cafeflow/features/pesanan/domain/pesanan_model.dart"
+    },
+    {
       "label": "widget_test.dart",
       "file_type": "code",
       "source_file": "test/widget_test.dart",
@@ -3132,7 +4230,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_binary_messenger_impl_h",
-      "community": 55,
+      "community": 3,
       "norm_label": "binary_messenger_impl.h"
     },
     {
@@ -3141,7 +4239,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L15",
       "id": "cpp_client_wrapper_binary_messenger_impl_flutter",
-      "community": 55,
+      "community": 3,
       "norm_label": "flutter()"
     },
     {
@@ -3150,7 +4248,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_binary_messenger_impl_h_namespace",
-      "community": 55,
+      "community": 3,
       "norm_label": "namespace"
     },
     {
@@ -3600,7 +4698,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc",
-      "community": 6,
+      "community": 1,
       "norm_label": "flutter_view_controller.cc"
     },
     {
@@ -3609,7 +4707,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L12",
       "id": "cpp_client_wrapper_flutter_view_controller_flutterviewcontroller",
-      "community": 6,
+      "community": 1,
       "norm_label": "flutterviewcontroller()"
     },
     {
@@ -3618,7 +4716,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L12",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_dartproject",
-      "community": 6,
+      "community": 1,
       "norm_label": "dartproject"
     },
     {
@@ -3627,7 +4725,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L32",
       "id": "cpp_client_wrapper_flutter_view_controller_view_id",
-      "community": 6,
+      "community": 1,
       "norm_label": "view_id()"
     },
     {
@@ -3636,7 +4734,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L32",
       "id": "flutterviewid",
-      "community": 6,
+      "community": 1,
       "norm_label": "flutterviewid"
     },
     {
@@ -3645,7 +4743,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L38",
       "id": "cpp_client_wrapper_flutter_view_controller_forceredraw",
-      "community": 6,
+      "community": 1,
       "norm_label": "forceredraw()"
     },
     {
@@ -3654,7 +4752,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "cpp_client_wrapper_flutter_view_controller_handletoplevelwindowproc",
-      "community": 6,
+      "community": 1,
       "norm_label": "handletoplevelwindowproc()"
     },
     {
@@ -3663,7 +4761,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_optional",
-      "community": 6,
+      "community": 1,
       "norm_label": "optional"
     },
     {
@@ -3672,7 +4770,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_lresult",
-      "community": 6,
+      "community": 1,
       "norm_label": "lresult"
     },
     {
@@ -3681,7 +4779,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_hwnd",
-      "community": 6,
+      "community": 1,
       "norm_label": "hwnd"
     },
     {
@@ -3690,7 +4788,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_uint",
-      "community": 6,
+      "community": 1,
       "norm_label": "uint"
     },
     {
@@ -3699,7 +4797,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_wparam",
-      "community": 6,
+      "community": 1,
       "norm_label": "wparam"
     },
     {
@@ -3708,7 +4806,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
       "source_location": "L42",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_flutter_view_controller_cc_lparam",
-      "community": 6,
+      "community": 1,
       "norm_label": "lparam"
     },
     {
@@ -4104,7 +5202,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_basic_message_channel_h",
-      "community": 56,
+      "community": 8,
       "norm_label": "basic_message_channel.h"
     },
     {
@@ -4113,7 +5211,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L15",
       "id": "flutter_basic_message_channel_flutter",
-      "community": 56,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4122,7 +5220,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_basic_message_channel_h_namespace",
-      "community": 56,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4131,7 +5229,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_binary_messenger_h",
-      "community": 55,
+      "community": 3,
       "norm_label": "binary_messenger.h"
     },
     {
@@ -4140,7 +5238,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L11",
       "id": "flutter_binary_messenger_flutter",
-      "community": 55,
+      "community": 3,
       "norm_label": "flutter()"
     },
     {
@@ -4149,7 +5247,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h",
       "source_location": "L11",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_binary_messenger_h_namespace",
-      "community": 55,
+      "community": 3,
       "norm_label": "namespace"
     },
     {
@@ -4230,7 +5328,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/engine_method_result.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_engine_method_result_h",
-      "community": 1,
+      "community": 8,
       "norm_label": "engine_method_result.h"
     },
     {
@@ -4239,7 +5337,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/engine_method_result.h",
       "source_location": "L16",
       "id": "flutter_engine_method_result_flutter",
-      "community": 1,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4248,7 +5346,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/engine_method_result.h",
       "source_location": "L16",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_engine_method_result_h_namespace",
-      "community": 1,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4446,7 +5544,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_message_codec_h",
-      "community": 56,
+      "community": 8,
       "norm_label": "message_codec.h"
     },
     {
@@ -4455,7 +5553,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L12",
       "id": "flutter_message_codec_flutter",
-      "community": 56,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4464,7 +5562,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h",
       "source_location": "L12",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_message_codec_h_namespace",
-      "community": 56,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4473,7 +5571,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_call_h",
-      "community": 50,
+      "community": 8,
       "norm_label": "method_call.h"
     },
     {
@@ -4482,7 +5580,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L11",
       "id": "flutter_method_call_flutter",
-      "community": 50,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4491,7 +5589,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h",
       "source_location": "L11",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_call_h_namespace",
-      "community": 50,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4500,7 +5598,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_channel_h",
-      "community": 53,
+      "community": 8,
       "norm_label": "method_channel.h"
     },
     {
@@ -4509,7 +5607,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L18",
       "id": "flutter_method_channel_flutter",
-      "community": 53,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4518,7 +5616,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L18",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_channel_h_namespace",
-      "community": 53,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4527,7 +5625,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L99",
       "id": "flutter_method_channel_setmethodcallhandler",
-      "community": 53,
+      "community": 8,
       "norm_label": "setmethodcallhandler()"
     },
     {
@@ -4536,7 +5634,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L99",
       "id": "methodcallhandler",
-      "community": 53,
+      "community": 8,
       "norm_label": "methodcallhandler"
     },
     {
@@ -4545,7 +5643,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L130",
       "id": "flutter_method_channel_resize",
-      "community": 53,
+      "community": 8,
       "norm_label": "resize()"
     },
     {
@@ -4554,7 +5652,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h",
       "source_location": "L139",
       "id": "flutter_method_channel_setwarnsonoverflow",
-      "community": 53,
+      "community": 8,
       "norm_label": "setwarnsonoverflow()"
     },
     {
@@ -4563,7 +5661,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h",
-      "community": 50,
+      "community": 8,
       "norm_label": "method_codec.h"
     },
     {
@@ -4572,7 +5670,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L15",
       "id": "flutter_method_codec_flutter",
-      "community": 50,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4581,7 +5679,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h_namespace",
-      "community": 50,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4590,7 +5688,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L75",
       "id": "flutter_method_codec_decodeandprocessresponseenvelope",
-      "community": 50,
+      "community": 8,
       "norm_label": "decodeandprocessresponseenvelope()"
     },
     {
@@ -4599,7 +5697,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h",
       "source_location": "L75",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_codec_h_methodresult",
-      "community": 50,
+      "community": 8,
       "norm_label": "methodresult"
     },
     {
@@ -4608,7 +5706,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_result_h",
-      "community": 1,
+      "community": 8,
       "norm_label": "method_result.h"
     },
     {
@@ -4617,7 +5715,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result.h",
       "source_location": "L10",
       "id": "flutter_method_result_flutter",
-      "community": 1,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4626,7 +5724,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result.h",
       "source_location": "L10",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_result_h_namespace",
-      "community": 1,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4635,7 +5733,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result_functions.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_result_functions_h",
-      "community": 1,
+      "community": 8,
       "norm_label": "method_result_functions.h"
     },
     {
@@ -4644,7 +5742,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result_functions.h",
       "source_location": "L14",
       "id": "flutter_method_result_functions_flutter",
-      "community": 1,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4653,7 +5751,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result_functions.h",
       "source_location": "L14",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_method_result_functions_h_namespace",
-      "community": 1,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -4797,7 +5895,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L1",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_standard_method_codec_h",
-      "community": 50,
+      "community": 8,
       "norm_label": "standard_method_codec.h"
     },
     {
@@ -4806,7 +5904,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L15",
       "id": "flutter_standard_method_codec_flutter",
-      "community": 50,
+      "community": 8,
       "norm_label": "flutter()"
     },
     {
@@ -4815,7 +5913,7 @@
       "source_file": "windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h",
       "source_location": "L15",
       "id": "windows_flutter_ephemeral_cpp_client_wrapper_include_flutter_standard_method_codec_h_namespace",
-      "community": 50,
+      "community": 8,
       "norm_label": "namespace"
     },
     {
@@ -5483,6 +6581,51 @@
       "id": "workflows_graphify_workflow_graphify",
       "community": 34,
       "norm_label": "workflow: graphify"
+    },
+    {
+      "label": "Divider",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "community": 14,
+      "norm_label": "divider",
+      "id": "presentation_dashboard_page_divider"
+    },
+    {
+      "label": "../../../core/utils/currency_formatter.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "community": 14,
+      "norm_label": "../../../core/utils/currency_formatter.dart",
+      "id": "core_utils_currency_formatter_dart"
+    },
+    {
+      "label": "../../meja/presentation/meja_provider.dart",
+      "file_type": "code",
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "community": 48,
+      "norm_label": "../../meja/presentation/meja_provider.dart",
+      "id": "meja_presentation_meja_provider_dart"
+    },
+    {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "community": 20,
+      "norm_label": "padding",
+      "id": "presentation_pesanan_page_padding"
+    },
+    {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "community": 21,
+      "norm_label": "padding",
+      "id": "presentation_produk_page_padding"
     },
     {
       "label": "package:intl/intl.dart",
@@ -6663,6 +7806,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_page_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_page_dart_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_page_dart",
       "target": "lib_features_dashboard_presentation_dashboard_page_dart_kafe_presentation_active_cafe_provider_dart"
     },
     {
@@ -6914,6 +8067,16 @@
       "weight": 1.0,
       "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
       "target": "lib_features_dashboard_presentation_dashboard_provider_dart_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/dashboard/presentation/dashboard_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_dashboard_presentation_dashboard_provider_dart",
+      "target": "lib_features_dashboard_presentation_dashboard_provider_dart_meja_presentation_meja_provider_dart"
     },
     {
       "relation": "imports",
@@ -8066,6 +9229,126 @@
       "target": "presentation_pengaturan_page_text"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_data_pesanan_repository_dart",
+      "target": "data_pesanan_repository_pesananrepository"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_data_pesanan_repository_dart",
+      "target": "lib_features_pesanan_data_pesanan_repository_dart_core_config_supabase_config_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_data_pesanan_repository_dart",
+      "target": "lib_features_pesanan_data_pesanan_repository_dart_domain_pesanan_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_data_pesanan_repository_dart",
+      "target": "lib_features_pesanan_data_pesanan_repository_dart_package_flutter_foundation_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/data/pesanan_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_data_pesanan_repository_dart",
+      "target": "lib_features_pesanan_data_pesanan_repository_dart_package_supabase_flutter_supabase_flutter_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/domain/pesanan_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_domain_pesanan_model_dart",
+      "target": "domain_pesanan_model_detailpesananmodel"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/domain/pesanan_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_domain_pesanan_model_dart",
+      "target": "domain_pesanan_model_pesananmodel"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "dialogs_buat_pesanan_modal_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "dialogs_struk_pesanan_dialog_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_domain_pesanan_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -8076,6 +9359,36 @@
       "target": "lib_features_pesanan_presentation_pesanan_page_dart_package_flutter_material_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_package_intl_intl_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "lib_features_pesanan_presentation_pesanan_page_dart_pos_cart_provider_dart"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -8084,6 +9397,36 @@
       "weight": 1.0,
       "source": "lib_features_pesanan_presentation_pesanan_page_dart",
       "target": "presentation_pesanan_page_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_center"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_datarow"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_icon"
     },
     {
       "relation": "defines",
@@ -8113,7 +9456,57 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_showbuatpesananmodal"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_showstrukdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_singlechildscrollview"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
       "target": "presentation_pesanan_page_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pesanan_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pesanan_page_dart",
+      "target": "presentation_pesanan_page_spacer"
     },
     {
       "relation": "defines",
@@ -8129,11 +9522,621 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "data_pesanan_repository_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "lib_features_pesanan_presentation_pos_cart_provider_dart_domain_pesanan_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "lib_features_pesanan_presentation_pos_cart_provider_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "lib_features_pesanan_presentation_pos_cart_provider_dart_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "lib_features_pesanan_presentation_pos_cart_provider_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_additem"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_cartitem"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_detailpesananmodel"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_pesananrepository"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_poscartnotifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_poscartstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_removeitem"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_resetcart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_selectmeja"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_updatecatatan"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "presentation_pos_cart_provider_updatequantity"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/pos_cart_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_pos_cart_provider_dart",
+      "target": "produk_domain_produk_model_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_buatpesananmodal"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_card"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_container"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_dialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_dropdownmenuitem"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_icon"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_spacer"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_text"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "dialogs_buat_pesanan_modal_verticaldivider"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_meja_domain_meja_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_meja_presentation_meja_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart_pos_cart_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "produk_presentation_produk_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/buat_pesanan_modal.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_buat_pesanan_modal_dart",
+      "target": "struk_pesanan_dialog_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_dialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_divider"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_receiptrow"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_row"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "dialogs_struk_pesanan_dialog_strukpesanandialog"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/pesanan/presentation/dialogs/struk_pesanan_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart",
+      "target": "lib_features_pesanan_presentation_dialogs_struk_pesanan_dialog_dart_package_intl_intl_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_data_produk_repository_dart",
+      "target": "data_produk_repository_produkrepository"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_data_produk_repository_dart",
+      "target": "lib_features_produk_data_produk_repository_dart_core_config_supabase_config_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_data_produk_repository_dart",
+      "target": "lib_features_produk_data_produk_repository_dart_domain_produk_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_data_produk_repository_dart",
+      "target": "lib_features_produk_data_produk_repository_dart_package_flutter_foundation_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/data/produk_repository.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_data_produk_repository_dart",
+      "target": "lib_features_produk_data_produk_repository_dart_package_supabase_flutter_supabase_flutter_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/domain/produk_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_domain_produk_model_dart",
+      "target": "domain_produk_model_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/domain/produk_model.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_domain_produk_model_dart",
+      "target": "domain_produk_model_produkmodel"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "lib_features_produk_presentation_produk_page_dart_core_utils_currency_formatter_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "lib_features_produk_presentation_produk_page_dart_domain_produk_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "lib_features_produk_presentation_produk_page_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "lib/features/produk/presentation/produk_page.dart",
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_produk_presentation_produk_page_dart",
       "target": "lib_features_produk_presentation_produk_page_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "lib_features_produk_presentation_produk_page_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "lib_features_produk_presentation_produk_page_dart_produk_provider_dart"
     },
     {
       "relation": "defines",
@@ -8144,6 +10147,16 @@
       "weight": 1.0,
       "source": "lib_features_produk_presentation_produk_page_dart",
       "target": "presentation_produk_page_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "presentation_produk_page_datarow"
     },
     {
       "relation": "defines",
@@ -8173,6 +10186,36 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "presentation_produk_page_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "presentation_produk_page_showeditprodukdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
+      "target": "presentation_produk_page_showtambahprodukdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_page.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_page_dart",
       "target": "presentation_produk_page_sizedbox"
     },
     {
@@ -8184,6 +10227,236 @@
       "weight": 1.0,
       "source": "lib_features_produk_presentation_produk_page_dart",
       "target": "presentation_produk_page_text"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "data_produk_repository_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "lib_features_produk_presentation_produk_provider_dart_domain_produk_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "lib_features_produk_presentation_produk_provider_dart_kafe_presentation_active_cafe_provider_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "lib_features_produk_presentation_produk_provider_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_copywith"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_loadproduk"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_produknotifier"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_produkrepository"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_produkstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_setkategori"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/produk_provider.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_produk_provider_dart",
+      "target": "presentation_produk_provider_setsearchquery"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_dialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_dispose"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_initstate"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_sizedbox"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_snackbar"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_tambaheditprodukdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "dialogs_tambah_edit_produk_dialog_tambaheditprodukdialogstate"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_domain_produk_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_package_flutter_riverpod_flutter_riverpod_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/features/produk/presentation/dialogs/tambah_edit_produk_dialog.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart",
+      "target": "lib_features_produk_presentation_dialogs_tambah_edit_produk_dialog_dart_produk_provider_dart"
     },
     {
       "relation": "defines",
@@ -8564,6 +10837,46 @@
       "weight": 1.0,
       "source": "test_dashboard_occupancy_test_dart",
       "target": "test_dashboard_occupancy_test_mejamodel"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_pesanan_test_dart",
+      "target": "package_cafeflow_features_pesanan_domain_pesanan_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_pesanan_test_dart",
+      "target": "package_cafeflow_features_produk_domain_produk_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_pesanan_test_dart",
+      "target": "test_pesanan_test_dart_package_flutter_test_flutter_test_dart"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/pesanan_test.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "test_pesanan_test_dart",
+      "target": "test_pesanan_test_main"
     },
     {
       "relation": "imports",
@@ -12858,5 +15171,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "258b820bb60d2023db73f87b82137348f9bc6b9a"
+  "built_at_commit": "c782937813a6ace6844f3648acf4acd80dffb9d7"
 }

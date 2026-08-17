@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\dashboard\\presentation\\dashboard_page.dart": {
-    "mtime": 1786976736.0471938,
-    "ast_hash": "b4be50316fe7e2badbb84402fbda3c81",
+    "mtime": 1786977748.6320913,
+    "ast_hash": "62f0ad359fee0bb14eab3b9fb97ddf08",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\kafe\\presentation\\kafe_page.dart": {
@@ -90,13 +90,13 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\pesanan_page.dart": {
-    "mtime": 1786973029.7058704,
-    "ast_hash": "ba683e2a061088ac5beda21f2d9b0d98",
+    "mtime": 1786978002.4916832,
+    "ast_hash": "e6e8fa79c95d13cd484873d82f820353",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\produk\\presentation\\produk_page.dart": {
-    "mtime": 1786973024.907764,
-    "ast_hash": "e7c40fca839124d172e96cd3a5082863",
+    "mtime": 1786977995.8133767,
+    "ast_hash": "05a398e6eeb258342bdc9f5fe4e223ba",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\sesi_meja\\presentation\\sesi_meja_page.dart": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\full_setup.sql": {
-    "mtime": 1786976672.6084151,
-    "ast_hash": "d1c8749daefb973b29e822503121ef13",
+    "mtime": 1786978654.0368779,
+    "ast_hash": "3535317ef74e0a745ad7620efe2485fa",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\supabase\\seed.sql": {
@@ -560,13 +560,63 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\lib\\features\\sesi_meja\\domain\\sesi_meja_model.dart": {
-    "mtime": 1786976686.3469648,
-    "ast_hash": "3eec363bb9ebe7825a15462e3fcecef7",
+    "mtime": 1786978956.7112894,
+    "ast_hash": "1616899f78cc8489ee35eddeb34c8329",
     "semantic_hash": ""
   },
   "D:\\usaha\\cafeflow\\test\\dashboard_occupancy_test.dart": {
     "mtime": 1786976750.8719082,
     "ast_hash": "d0cb33b17561a0ffd1482e9cc020ee29",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\data\\pesanan_repository.dart": {
+    "mtime": 1786977954.668151,
+    "ast_hash": "12ce2d4eaf51a2b6ee2a2c1471882cdc",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\domain\\pesanan_model.dart": {
+    "mtime": 1786978965.845546,
+    "ast_hash": "6a6ff41df92296089db312c282fcea2c",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\pos_cart_provider.dart": {
+    "mtime": 1786977967.0256586,
+    "ast_hash": "187fa3855861e1bae4ab6ed926f6cc9d",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\dialogs\\buat_pesanan_modal.dart": {
+    "mtime": 1786978465.2619078,
+    "ast_hash": "71e6d0fcc231ea0646d582f04603dbf7",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\pesanan\\presentation\\dialogs\\struk_pesanan_dialog.dart": {
+    "mtime": 1786978972.4941802,
+    "ast_hash": "fe522f1a3465b850eefada1a77a1c2ca",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\produk\\data\\produk_repository.dart": {
+    "mtime": 1786977949.1872556,
+    "ast_hash": "ed10a182410385ea446010fb9fff844b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\produk\\domain\\produk_model.dart": {
+    "mtime": 1786977936.5607471,
+    "ast_hash": "a4eae4199285f7299986cbdbe12c75c0",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\produk\\presentation\\produk_provider.dart": {
+    "mtime": 1786978630.7071047,
+    "ast_hash": "f720eeea5bc61cc603590511b6b6f417",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\lib\\features\\produk\\presentation\\dialogs\\tambah_edit_produk_dialog.dart": {
+    "mtime": 1786977973.8464158,
+    "ast_hash": "c0f9ef070c09face37eaecfd3e7204b1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\cafeflow\\test\\pesanan_test.dart": {
+    "mtime": 1786978007.821392,
+    "ast_hash": "1a8ee87a4a3437cb4a69742f91ffd75d",
     "semantic_hash": ""
   }
 }

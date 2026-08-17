@@ -321,104 +321,140 @@ class _MejaCard extends StatelessWidget {
     final totalBelanjaText = sesi != null ? CurrencyFormatter.formatRupiah(sesi!.totalBelanja) : 'Rp 0';
 
     return Container(
-      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: visualConfig.bgColor,
+        color: theme.cardTheme.color ?? Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: visualConfig.borderColor, width: 1.2),
+        border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.4), width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: 8,
-            offset: const Offset(0, 3),
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          // Header Card: Nomor Meja & Status Badge
-          Row(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(
+              left: BorderSide(color: visualConfig.accentColor, width: 6),
+            ),
+          ),
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              // Header Card: Nomor Meja & Status Badge
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    meja.nomorMeja,
-                    style: theme.textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text(
+                          meja.nomorMeja,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 18,
+                            color: theme.colorScheme.onSurface,
+                          ),
+                        ),
+                        if (meja.namaMeja != null && meja.namaMeja!.isNotEmpty) ...[
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Text(
+                              '(${meja.namaMeja})',
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
                     ),
                   ),
-                  if (meja.namaMeja != null && meja.namaMeja!.isNotEmpty) ...[
-                    const SizedBox(width: 6),
-                    Text(
-                      '(${meja.namaMeja})',
-                      style: TextStyle(color: Colors.grey[700], fontSize: 12),
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: visualConfig.accentColor,
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                  ],
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(visualConfig.icon, size: 13, color: Colors.white),
+                        const SizedBox(width: 4),
+                        Text(
+                          visualConfig.label,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: visualConfig.badgeBgColor,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  children: [
-                    Icon(visualConfig.icon, size: 14, color: visualConfig.textColor),
-                    const SizedBox(width: 4),
-                    Text(
-                      visualConfig.label,
-                      style: TextStyle(
-                        color: visualConfig.textColor,
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                      ),
+
+              const SizedBox(height: 6),
+
+              // Sisa Waktu Countdown
+              Row(
+                children: [
+                  Icon(Icons.timer_outlined, size: 18, color: visualConfig.accentColor),
+                  const SizedBox(width: 8),
+                  Text(
+                    statusVisual == StatusVisualMeja.tersedia
+                        ? 'Meja Tersedia'
+                        : (statusVisual == StatusVisualMeja.nonaktif ? 'Meja Nonaktif' : sisaWaktuText),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 15,
+                      color: statusVisual == StatusVisualMeja.tersedia
+                          ? theme.colorScheme.onSurface
+                          : visualConfig.accentColor,
                     ),
-                  ],
-                ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 6),
+              Divider(height: 1, color: theme.colorScheme.outline.withValues(alpha: 0.3)),
+              const SizedBox(height: 6),
+
+              // Footer Details: Jam Mulai & Total Belanja (Rp)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Mulai: $jamMulaiText',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+                    ),
+                  ),
+                  Text(
+                    totalBelanjaText,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w800,
+                      color: theme.colorScheme.primary,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-
-          // Sisa Waktu Countdown
-          Row(
-            children: [
-              Icon(Icons.timer_outlined, size: 16, color: visualConfig.textColor),
-              const SizedBox(width: 6),
-              Text(
-                statusVisual == StatusVisualMeja.tersedia
-                    ? 'Tersedia'
-                    : (statusVisual == StatusVisualMeja.nonaktif ? 'Nonaktif' : sisaWaktuText),
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                  color: visualConfig.textColor,
-                ),
-              ),
-            ],
-          ),
-
-          const Divider(height: 1),
-
-          // Footer Details: Jam Mulai & Total Belanja (Rp)
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Mulai: $jamMulaiText',
-                style: TextStyle(fontSize: 11, color: Colors.grey[700]),
-              ),
-              Text(
-                totalBelanjaText,
-                style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -426,58 +462,40 @@ class _MejaCard extends StatelessWidget {
   _VisualConfig _getVisualConfig(StatusVisualMeja status) {
     switch (status) {
       case StatusVisualMeja.tersedia:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: 'Tersedia',
           icon: Icons.check_circle_outline_rounded,
-          bgColor: const Color(0xFFF2F9F5),
-          badgeBgColor: const Color(0xFFE1F5FE),
-          borderColor: const Color(0xFFA5D6A7),
-          textColor: const Color(0xFF2E7D32),
+          accentColor: Color(0xFF2E7D32), // Emerald Green
         );
       case StatusVisualMeja.aktif:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: 'Aktif',
           icon: Icons.timer_rounded,
-          bgColor: const Color(0xFFF0F4FE),
-          badgeBgColor: const Color(0xFFDBEAFE),
-          borderColor: const Color(0xFF90CAF9),
-          textColor: const Color(0xFF1565C0),
+          accentColor: Color(0xFF1565C0), // Royal Blue
         );
       case StatusVisualMeja.kurang15Menit:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: '< 15 Mnt',
           icon: Icons.warning_amber_rounded,
-          bgColor: const Color(0xFFFFFDE7),
-          badgeBgColor: const Color(0xFFFFF59D),
-          borderColor: const Color(0xFFFFE082),
-          textColor: const Color(0xFFF57F17),
+          accentColor: Color(0xFFD97706), // Amber Orange
         );
       case StatusVisualMeja.masaTenggang:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: 'Tenggang',
           icon: Icons.hourglass_bottom_rounded,
-          bgColor: const Color(0xFFFFF3E0),
-          badgeBgColor: const Color(0xFFFFCC80),
-          borderColor: const Color(0xFFFFB74D),
-          textColor: const Color(0xFFE65100),
+          accentColor: Color(0xFFE65100), // Vivid Deep Orange
         );
       case StatusVisualMeja.melewatiWaktu:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: 'Waktu Habis',
           icon: Icons.alarm_off_rounded,
-          bgColor: const Color(0xFFFFEBEE),
-          badgeBgColor: const Color(0xFFFFCDD2),
-          borderColor: const Color(0xFFEF9A9A),
-          textColor: const Color(0xFFC62828),
+          accentColor: Color(0xFFC62828), // Crimson Red
         );
       case StatusVisualMeja.nonaktif:
-        return _VisualConfig(
+        return const _VisualConfig(
           label: 'Nonaktif',
           icon: Icons.block_rounded,
-          bgColor: const Color(0xFFF5F5F5),
-          badgeBgColor: const Color(0xFFE0E0E0),
-          borderColor: const Color(0xFFBDBDBD),
-          textColor: const Color(0xFF616161),
+          accentColor: Color(0xFF616161), // Slate Grey
         );
     }
   }
@@ -486,17 +504,11 @@ class _MejaCard extends StatelessWidget {
 class _VisualConfig {
   final String label;
   final IconData icon;
-  final Color bgColor;
-  final Color badgeBgColor;
-  final Color borderColor;
-  final Color textColor;
+  final Color accentColor;
 
   const _VisualConfig({
     required this.label,
     required this.icon,
-    required this.bgColor,
-    required this.badgeBgColor,
-    required this.borderColor,
-    required this.textColor,
+    required this.accentColor,
   });
 }

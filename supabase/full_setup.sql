@@ -175,11 +175,17 @@ CREATE TABLE IF NOT EXISTS data_produk (
     nama_produk VARCHAR(150) NOT NULL,
     kategori VARCHAR(50) NOT NULL DEFAULT 'makanan' CHECK (kategori IN ('makanan', 'minuman', 'snack', 'lainnya')),
     harga NUMERIC(12, 2) NOT NULL CHECK (harga >= 0),
+    deskripsi TEXT,
     durasi_tambahan_menit INT NOT NULL DEFAULT 0 CHECK (durasi_tambahan_menit >= 0),
+    status_tersedia BOOLEAN NOT NULL DEFAULT TRUE,
     status_aktif BOOLEAN NOT NULL DEFAULT TRUE,
     dibuat_pada TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     diubah_pada TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- Migrasi Kolom Tambahan data_produk
+ALTER TABLE data_produk ADD COLUMN IF NOT EXISTS deskripsi TEXT;
+ALTER TABLE data_produk ADD COLUMN IF NOT EXISTS status_tersedia BOOLEAN NOT NULL DEFAULT TRUE;
 
 CREATE INDEX IF NOT EXISTS idx_data_produk_kafe ON data_produk(id_kafe);
 DROP TRIGGER IF EXISTS trg_data_produk_diubah_pada ON data_produk;
@@ -305,24 +311,52 @@ CREATE POLICY "Pengguna terautentikasi dapat mengelola data meja kafe mereka" ON
     FOR ALL TO authenticated
     USING (id_kafe IN (
         SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
+    ))
+    WITH CHECK (id_kafe IN (
+        SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
     ));
 
 CREATE POLICY "Pengguna terautentikasi dapat mengelola data sesi meja kafe mereka" ON data_sesi_meja
     FOR ALL TO authenticated
     USING (id_kafe IN (
         SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
+    ))
+    WITH CHECK (id_kafe IN (
+        SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
     ));
 
 CREATE POLICY "Pengguna terautentikasi dapat mengelola data produk kafe mereka" ON data_produk
     FOR ALL TO authenticated
     USING (id_kafe IN (
         SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
+    ))
+    WITH CHECK (id_kafe IN (
+        SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
     ));
 
 CREATE POLICY "Pengguna terautentikasi dapat mengelola data pesanan kafe mereka" ON data_pesanan
     FOR ALL TO authenticated
     USING (id_kafe IN (
         SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
+    ))
+    WITH CHECK (id_kafe IN (
+        SELECT id_kafe FROM data_pegawai_kafe WHERE id_pengguna = auth.uid() AND status_aktif = TRUE
+        UNION
+        SELECT id_kafe FROM data_pengguna WHERE id_pengguna = auth.uid()
     ));
 
 CREATE POLICY "Pengguna terautentikasi dapat mengelola detail pesanan kafe mereka" ON data_detail_pesanan
@@ -371,3 +405,126 @@ DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
 AFTER INSERT ON auth.users
 FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+
+-- ====================================================================
+-- FUNGSI ATOMIK PL/PGSQL: buat_pesanan_awal_dan_mulai_sesi
+-- Menghitung total belanja, me-reverifikasi harga produk dari DB,
+-- menentukan menit Comfort Time, membuat data_sesi_meja, data_pesanan, 
+-- data_detail_pesanan, serta memperbarui status_meja menjadi 'terisi' secara atomik.
+-- ====================================================================
+CREATE OR REPLACE FUNCTION public.buat_pesanan_awal_dan_mulai_sesi(
+    p_id_kafe UUID,
+    p_id_meja UUID,
+    p_id_pelanggan UUID,
+    p_items JSONB
+)
+RETURNS JSONB AS $$
+DECLARE
+    v_id_pesanan UUID := gen_random_uuid();
+    v_id_sesi UUID := gen_random_uuid();
+    v_nomor_pesanan VARCHAR(50);
+    v_seq INT;
+    v_item JSONB;
+    v_id_produk UUID;
+    v_jumlah INT;
+    v_catatan TEXT;
+    v_harga NUMERIC(12, 2);
+    v_durasi_produk INT;
+    v_subtotal NUMERIC(12, 2);
+    v_total_belanja NUMERIC(12, 2) := 0.00;
+    v_total_menit INT := 60; -- Default 60 menit jika tidak ada rule
+    v_rule_menit INT;
+    v_bonus_menit INT := 0;
+    v_waktu_mulai TIMESTAMPTZ := NOW();
+    v_waktu_berakhir TIMESTAMPTZ;
+BEGIN
+    -- 1. Generate Nomor Pesanan mudah dibaca manusia (Contoh: CF-20260817-0001)
+    SELECT COALESCE(COUNT(*), 0) + 1 INTO v_seq 
+    FROM data_pesanan 
+    WHERE id_kafe = p_id_kafe AND DATE(waktu_pesanan) = CURRENT_DATE;
+    
+    v_nomor_pesanan := 'CF-' || TO_CHAR(CURRENT_DATE, 'YYYYMMDD') || '-' || LPAD(v_seq::TEXT, 4, '0');
+
+    -- 2. Validasi & Kalkulasi Ulang Harga Produk langsung dari database
+    FOR v_item IN SELECT * FROM jsonb_array_elements(p_items)
+    LOOP
+        v_id_produk := (v_item->>'id_produk')::UUID;
+        v_jumlah := (v_item->>'jumlah')::INT;
+        
+        SELECT harga, durasi_tambahan_menit INTO v_harga, v_durasi_produk 
+        FROM data_produk 
+        WHERE id_produk = v_id_produk AND id_kafe = p_id_kafe AND status_aktif = TRUE;
+
+        IF v_harga IS NULL THEN
+            RAISE EXCEPTION 'Produk % tidak ditemukan atau nonaktif pada kafe ini.', v_id_produk;
+        END IF;
+
+        v_subtotal := v_harga * v_jumlah;
+        v_total_belanja := v_total_belanja + v_subtotal;
+        v_bonus_menit := v_bonus_menit + (v_durasi_produk * v_jumlah);
+    END LOOP;
+
+    -- 3. Cari aturan waktu Comfort Time di data_aturan_waktu berdasarkan min_belanja
+    SELECT durasi_menit INTO v_rule_menit 
+    FROM data_aturan_waktu 
+    WHERE id_kafe = p_id_kafe AND status_aktif = TRUE AND min_belanja <= v_total_belanja 
+    ORDER BY min_belanja DESC LIMIT 1;
+
+    IF v_rule_menit IS NOT NULL THEN
+        v_total_menit := v_rule_menit + v_bonus_menit;
+    ELSE
+        v_total_menit := v_total_menit + v_bonus_menit;
+    END IF;
+
+    v_waktu_berakhir := v_waktu_mulai + (v_total_menit || ' minutes')::INTERVAL;
+
+    -- 4. Buat data_sesi_meja
+    INSERT INTO data_sesi_meja (
+        id_sesi_meja, id_kafe, id_meja, id_pelanggan,
+        waktu_mulai, waktu_berakhir, durasi_awal_menit, total_durasi_menit, status_sesi
+    ) VALUES (
+        v_id_sesi, p_id_kafe, p_id_meja, p_id_pelanggan,
+        v_waktu_mulai, v_waktu_berakhir, v_total_menit, v_total_menit, 'aktif'
+    );
+
+    -- 5. Buat data_pesanan
+    INSERT INTO data_pesanan (
+        id_pesanan, id_kafe, id_meja, id_sesi_meja, nomor_pesanan,
+        total_belanja, status_pesanan, waktu_pesanan
+    ) VALUES (
+        v_id_pesanan, p_id_kafe, p_id_meja, v_id_sesi, v_nomor_pesanan,
+        v_total_belanja, 'selesai', v_waktu_mulai
+    );
+
+    -- 6. Buat detail pesanan di data_detail_pesanan
+    FOR v_item IN SELECT * FROM jsonb_array_elements(p_items)
+    LOOP
+        v_id_produk := (v_item->>'id_produk')::UUID;
+        v_jumlah := (v_item->>'jumlah')::INT;
+        v_catatan := v_item->>'catatan';
+
+        SELECT harga INTO v_harga FROM data_produk WHERE id_produk = v_id_produk;
+        v_subtotal := v_harga * v_jumlah;
+
+        INSERT INTO data_detail_pesanan (
+            id_pesanan, id_produk, jumlah, harga_satuan, subtotal, catatan
+        ) VALUES (
+            v_id_pesanan, v_id_produk, v_jumlah, v_harga, v_subtotal, v_catatan
+        );
+    END LOOP;
+
+    -- 7. Ubah status meja menjadi 'terisi'
+    UPDATE data_meja SET status_meja = 'terisi' WHERE id_meja = p_id_meja AND id_kafe = p_id_kafe;
+
+    -- Return JSON metadata hasil pembuatan pesanan atomik
+    RETURN jsonb_build_object(
+        'id_pesanan', v_id_pesanan,
+        'nomor_pesanan', v_nomor_pesanan,
+        'id_sesi_meja', v_id_sesi,
+        'total_belanja', v_total_belanja,
+        'durasi_menit', v_total_menit,
+        'waktu_berakhir', v_waktu_berakhir
+    );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+

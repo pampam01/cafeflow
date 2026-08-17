@@ -1,16 +1,16 @@
 # Graph Report - cafeflow  (2026-08-17)
 
 ## Corpus Check
-- 98 files · ~36,149 words
+- 108 files · ~41,734 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 622 nodes · 698 edges · 59 communities (50 shown, 9 thin omitted)
+- 749 nodes · 815 edges · 64 communities (53 shown, 11 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `258b820b`
+- Built from commit: `c7829378`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,15 +61,20 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
-- [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
-- [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
-- [[_COMMUNITY_Community 55|Community 55]]
-- [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `EncodableValue` - 14 edges
@@ -95,15 +100,15 @@
 - `OnCreate()` --calls--> `GetClientArea()`  [INFERRED]
   windows/runner/flutter_window.cpp → windows/runner/win32_window.cpp
 
-## Communities (59 total, 9 thin omitted)
+## Communities (64 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
 Nodes (34): RegisterPlugins(), PluginRegistry, Point, RECT, OnCreate(), Create(), Destroy(), EnableFullDpiSupportIfAvailable() (+26 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.22
-Nodes (6): flutter(), flutter(), flutter(), namespace, namespace, namespace
+Cohesion: 0.15
+Nodes (11): FlutterViewController(), HandleTopLevelWindowProc(), view_id(), FlutterViewId, DartProject, HWND, LPARAM, LRESULT (+3 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.18
@@ -111,7 +116,7 @@ Nodes (28): ByteStreamReader, ByteStreamWriter, DecodeAndProcessResponseEnvelope
 
 ### Community 3 - "Community 3"
 Cohesion: 0.06
-Nodes (25): AddPlugin(), ClearPlugins(), GetInstance(), OnRegistrarDestroyed(), PluginRegistrar(), flutter(), flutter(), flutter() (+17 more)
+Nodes (29): flutter(), AddPlugin(), ClearPlugins(), GetInstance(), OnRegistrarDestroyed(), PluginRegistrar(), flutter(), flutter() (+21 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.09
@@ -122,16 +127,16 @@ Cohesion: 0.11
 Nodes (21): BinaryMessageHandler, BinaryMessenger, BinaryReply, BinaryMessengerImpl(), ForwardToHandler(), RegisterTexture(), ReplyManager(), ResizeChannel() (+13 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.15
-Nodes (11): FlutterViewController(), HandleTopLevelWindowProc(), view_id(), FlutterViewId, DartProject, HWND, LPARAM, LRESULT (+3 more)
+Cohesion: 0.10
+Nodes (20): BuatPesananModal, build, Card, Container, Dialog, DropdownMenuItem, Icon, SizedBox (+12 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.10
 Nodes (19): FlutterEngine(), GetRegistrarForPlugin(), ProcessExternalWindowMessage(), ProcessMessages(), RelinquishEngine(), SetNextFrameCallback(), ShutDown(), FlutterDesktopEngineRef (+11 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.14
-Nodes (10): flutter(), flutter(), flutter(), flutter(), flutter(), namespace, namespace, namespace (+2 more)
+Cohesion: 0.05
+Nodes (32): flutter(), flutter(), flutter(), flutter(), flutter(), flutter(), flutter(), flutter() (+24 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.09
@@ -154,8 +159,8 @@ Cohesion: 0.15
 Nodes (12): app/routes/app_router.dart, app/theme/app_theme.dart, core/config/supabase_config.dart, build, CafeFlowApp, core/config/supabase_config.dart, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart (+4 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.08
-Nodes (25): ../../../core/utils/currency_formatter.dart, dashboard_provider.dart, ../../kafe/presentation/active_cafe_provider.dart, ../../meja/domain/meja_model.dart, package:cafeflow/core/utils/currency_formatter.dart, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart, package:intl/intl.dart (+17 more)
+Cohesion: 0.07
+Nodes (26): ../../../core/utils/currency_formatter.dart, dashboard_provider.dart, ../../../core/utils/currency_formatter.dart, ../../kafe/presentation/active_cafe_provider.dart, ../../meja/domain/meja_model.dart, package:cafeflow/core/utils/currency_formatter.dart, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart (+18 more)
 
 ### Community 15 - "Community 15"
 Cohesion: 0.29
@@ -178,12 +183,12 @@ Cohesion: 0.29
 Nodes (6): package:flutter/material.dart, build, Padding, PengaturanPage, SizedBox, Text
 
 ### Community 20 - "Community 20"
-Cohesion: 0.29
-Nodes (6): package:flutter/material.dart, build, Padding, PesananPage, SizedBox, Text
+Cohesion: 0.09
+Nodes (22): dialogs/buat_pesanan_modal.dart, dialogs/struk_pesanan_dialog.dart, ../../../core/utils/currency_formatter.dart, ../domain/pesanan_model.dart, ../../kafe/presentation/active_cafe_provider.dart, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart, package:intl/intl.dart (+14 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.29
-Nodes (6): package:flutter/material.dart, build, Padding, ProdukPage, SizedBox, Text
+Cohesion: 0.12
+Nodes (16): dialogs/tambah_edit_produk_dialog.dart, ../../../core/utils/currency_formatter.dart, ../domain/produk_model.dart, ../../kafe/presentation/active_cafe_provider.dart, package:flutter/material.dart, package:flutter_riverpod/flutter_riverpod.dart, produk_provider.dart, build (+8 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.29
@@ -246,16 +251,12 @@ Cohesion: 0.13
 Nodes (14): build, _copyToken, Dialog, initState, LihatQrMejaDialog, _LihatQrMejaDialogState, SizedBox, SnackBar (+6 more)
 
 ### Community 48 - "Community 48"
-Cohesion: 0.14
-Nodes (13): dart:async, ../../kafe/presentation/active_cafe_provider.dart, ../../meja/domain/meja_model.dart, package:flutter_riverpod/flutter_riverpod.dart, ../../sesi_meja/domain/sesi_meja_model.dart, ../../meja/data/meja_repository.dart, ../../meja/presentation/meja_provider.dart, copyWith (+5 more)
+Cohesion: 0.13
+Nodes (14): dart:async, ../../kafe/presentation/active_cafe_provider.dart, ../../meja/domain/meja_model.dart, ../../meja/presentation/meja_provider.dart, package:flutter_riverpod/flutter_riverpod.dart, ../../sesi_meja/domain/sesi_meja_model.dart, ../../meja/data/meja_repository.dart, ../../meja/presentation/meja_provider.dart (+6 more)
 
 ### Community 49 - "Community 49"
 Cohesion: 0.15
 Nodes (12): build, Dialog, dispose, initState, SizedBox, SnackBar, TambahEditMejaDialog, _TambahEditMejaDialogState (+4 more)
-
-### Community 50 - "Community 50"
-Cohesion: 0.20
-Nodes (8): flutter(), DecodeAndProcessResponseEnvelope(), flutter(), flutter(), namespace, MethodResult, namespace, namespace
 
 ### Community 51 - "Community 51"
 Cohesion: 0.25
@@ -265,40 +266,56 @@ Nodes (7): ../data/meja_repository.dart, ../domain/meja_model.dart, ../../kafe/p
 Cohesion: 0.29
 Nodes (6): MejaRepository, ../../../core/config/supabase_config.dart, ../domain/meja_model.dart, package:flutter/foundation.dart, package:supabase_flutter/supabase_flutter.dart, ../../sesi_meja/domain/sesi_meja_model.dart
 
-### Community 53 - "Community 53"
-Cohesion: 0.29
-Nodes (4): flutter(), SetMethodCallHandler(), MethodCallHandler, namespace
-
 ### Community 54 - "Community 54"
 Cohesion: 0.29
 Nodes (6): package:cafeflow/features/dashboard/presentation/dashboard_provider.dart, package:cafeflow/features/meja/domain/meja_model.dart, package:cafeflow/features/sesi_meja/domain/sesi_meja_model.dart, package:flutter_test/flutter_test.dart, main, MejaModel
 
-### Community 55 - "Community 55"
-Cohesion: 0.33
-Nodes (4): flutter(), flutter(), namespace, namespace
+### Community 59 - "Community 59"
+Cohesion: 0.11
+Nodes (18): ../data/pesanan_repository.dart, ../domain/pesanan_model.dart, ../../kafe/presentation/active_cafe_provider.dart, ../../meja/domain/meja_model.dart, package:flutter_riverpod/flutter_riverpod.dart, addItem, CartItem, copyWith (+10 more)
 
-### Community 56 - "Community 56"
+### Community 60 - "Community 60"
+Cohesion: 0.15
+Nodes (12): build, Dialog, dispose, initState, SizedBox, SnackBar, TambahEditProdukDialog, _TambahEditProdukDialogState (+4 more)
+
+### Community 61 - "Community 61"
+Cohesion: 0.17
+Nodes (11): ../data/produk_repository.dart, ../domain/produk_model.dart, ../../kafe/presentation/active_cafe_provider.dart, package:flutter_riverpod/flutter_riverpod.dart, copyWith, loadProduk, ProdukNotifier, ProdukRepository (+3 more)
+
+### Community 63 - "Community 63"
+Cohesion: 0.18
+Nodes (10): build, Dialog, Divider, _ReceiptRow, Row, SizedBox, StrukPesananDialog, ../../../../core/utils/currency_formatter.dart (+2 more)
+
+### Community 64 - "Community 64"
 Cohesion: 0.33
-Nodes (4): flutter(), flutter(), namespace, namespace
+Nodes (5): PesananRepository, ../../../core/config/supabase_config.dart, ../domain/pesanan_model.dart, package:flutter/foundation.dart, package:supabase_flutter/supabase_flutter.dart
+
+### Community 65 - "Community 65"
+Cohesion: 0.33
+Nodes (5): ProdukRepository, ../../../core/config/supabase_config.dart, ../domain/produk_model.dart, package:flutter/foundation.dart, package:supabase_flutter/supabase_flutter.dart
+
+### Community 66 - "Community 66"
+Cohesion: 0.40
+Nodes (4): package:cafeflow/features/pesanan/domain/pesanan_model.dart, package:cafeflow/features/produk/domain/produk_model.dart, package:flutter_test/flutter_test.dart, main
 
 ## Knowledge Gaps
-- **391 isolated node(s):** `CafeFlowApp`, `main`, `initializeDateFormatting`, `ProviderScope`, `build` (+386 more)
+- **508 isolated node(s):** `CafeFlowApp`, `main`, `initializeDateFormatting`, `ProviderScope`, `build` (+503 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `EncodableValue` connect `Community 2` to `Community 5`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `EncodableValue` (e.g. with `ResizeChannel()` and `SetChannelWarnsOnOverflow()`) actually correct?**
   _`EncodableValue` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `CafeFlowApp`, `main`, `initializeDateFormatting` to the rest of the system?**
-  _391 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _508 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.08130081300813008 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.06306306306306306 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05537098560354374 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.08923076923076922 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
