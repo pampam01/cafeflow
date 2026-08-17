@@ -5,7 +5,9 @@ import 'package:intl/intl.dart';
 import 'dashboard_provider.dart';
 import '../../kafe/presentation/active_cafe_provider.dart';
 import '../../meja/domain/meja_model.dart';
+import '../../meja/presentation/dialogs/lihat_qr_meja_dialog.dart';
 import '../../sesi_meja/domain/sesi_meja_model.dart';
+import '../../pesanan/presentation/dialogs/buat_pesanan_modal.dart';
 import '../../../core/utils/currency_formatter.dart';
 
 class DashboardPage extends ConsumerWidget {
@@ -33,148 +35,188 @@ class DashboardPage extends ConsumerWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          namaKafe,
-                          style: theme.textTheme.headlineMedium?.copyWith(
-                            fontWeight: FontWeight.w800,
-                            color: theme.colorScheme.primary,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                          decoration: BoxDecoration(
-                            color: Colors.green[50],
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: Colors.green[300]!),
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 6,
-                                height: 6,
-                                decoration: const BoxDecoration(
-                                  color: Colors.green,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                              const SizedBox(width: 4),
-                              Text(
-                                'Real-time Live',
-                                style: TextStyle(color: Colors.green[900], fontSize: 11, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Text(
+                      namaKafe,
+                      style: theme.textTheme.headlineMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       tanggalHariIni,
-                      style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: Colors.grey[600],
+                      ),
                     ),
                   ],
                 ),
-                IconButton(
-                  icon: const Icon(Icons.refresh_rounded),
-                  tooltip: 'Muat Ulang Data',
-                  onPressed: () {
-                    final idKafe = activeCafeState.activeCafe?.idKafe;
-                    if (idKafe != null) {
-                      ref.read(dashboardNotifierProvider.notifier).refreshData(idKafe);
-                    }
-                  },
+                Row(
+                  children: [
+                    IconButton(
+                      tooltip: 'Sinkronkan Data Dashboard',
+                      icon: const Icon(Icons.sync_rounded, size: 20),
+                      onPressed: () {
+                        ref.read(dashboardNotifierProvider.notifier).refreshData();
+                      },
+                    ),
+                    const SizedBox(width: 8),
+                    ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      ),
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => const BuatPesananModal(),
+                        );
+                      },
+                      icon: const Icon(Icons.add_shopping_cart_rounded, size: 18),
+                      label: const Text('Buat Pesanan Baru (POS)', style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ],
                 ),
               ],
             ),
             const SizedBox(height: 24),
 
-            // KPI Overview Metrics Grid
+            // Operational KPI Row Cards
             LayoutBuilder(
               builder: (context, constraints) {
-                final crossAxisCount = constraints.maxWidth > 1000 ? 4 : (constraints.maxWidth > 650 ? 2 : 1);
-                return GridView.count(
-                  crossAxisCount: crossAxisCount,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 2.1,
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  children: [
-                    _KpiCard(
-                      title: 'Total Meja Aktif',
-                      value: '${dashboardState.totalMejaAktif} Meja',
-                      subtitle: 'Kapasitas kafe terdaftar',
-                      icon: Icons.table_restaurant_rounded,
-                      color: theme.colorScheme.primary,
-                    ),
-                    _KpiCard(
-                      title: 'Meja Digunakan',
-                      value: '${dashboardState.mejaTerisi} Meja',
-                      subtitle: 'Sesi pelanggan berlangsung',
-                      icon: Icons.people_alt_rounded,
-                      color: Colors.blue[700]!,
-                    ),
-                    _KpiCard(
-                      title: 'Meja Tersedia',
-                      value: '${dashboardState.mejaTersedia} Meja',
-                      subtitle: 'Siap menerima pelanggan',
-                      icon: Icons.check_circle_outline_rounded,
-                      color: Colors.teal[700]!,
-                    ),
-                    _KpiCard(
-                      title: 'Tingkat Okupansi',
-                      value: '${dashboardState.persentaseOkupansi.toStringAsFixed(1)}%',
-                      subtitle: 'Rasio penggunaan meja',
-                      icon: Icons.pie_chart_outline_rounded,
-                      color: Colors.amber[800]!,
-                    ),
-                  ],
-                );
+                final isWide = constraints.maxWidth > 900;
+                final isMedium = constraints.maxWidth > 600;
+
+                final kpiCards = [
+                  _KpiCard(
+                    title: 'Total Meja Aktif',
+                    value: '${dashboardState.totalMejaAktif}',
+                    subtitle: 'Terdaftar & aktif',
+                    icon: Icons.table_restaurant_rounded,
+                    color: Colors.blue[700]!,
+                  ),
+                  _KpiCard(
+                    title: 'Meja Digunakan',
+                    value: '${dashboardState.mejaTerisi}',
+                    subtitle: 'Sesi berjalan',
+                    icon: Icons.chair_alt_rounded,
+                    color: Colors.amber[800]!,
+                  ),
+                  _KpiCard(
+                    title: 'Meja Tersedia',
+                    value: '${dashboardState.mejaTersedia}',
+                    subtitle: 'Siap ditempati',
+                    icon: Icons.event_available_rounded,
+                    color: Colors.green[700]!,
+                  ),
+                  _KpiCard(
+                    title: 'Persentase Okupansi',
+                    value: '${dashboardState.persentaseOkupansi.toStringAsFixed(1)}%',
+                    subtitle: 'Rasio penggunaan',
+                    icon: Icons.pie_chart_outline_rounded,
+                    color: Colors.purple[600]!,
+                  ),
+                ];
+
+                if (isWide) {
+                  return Row(
+                    children: kpiCards
+                        .map((card) => Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 12.0),
+                                child: card,
+                              ),
+                            ))
+                        .toList(),
+                  );
+                } else if (isMedium) {
+                  return Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(child: kpiCards[0]),
+                          const SizedBox(width: 12),
+                          Expanded(child: kpiCards[1]),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        children: [
+                          Expanded(child: kpiCards[2]),
+                          const SizedBox(width: 12),
+                          Expanded(child: kpiCards[3]),
+                        ],
+                      ),
+                    ],
+                  );
+                } else {
+                  return Column(
+                    children: kpiCards
+                        .map((card) => Padding(
+                              padding: const EdgeInsets.only(bottom: 12.0),
+                              child: card,
+                            ))
+                        .toList(),
+                  );
+                }
               },
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 28),
 
-            // Section Header: Kartu Status Meja
+            // Section Title: Grid Status Meja Operasional
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Kartu Status Meja Operasional',
-                  style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  'Status Operasional Meja',
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                Text(
-                  '${dashboardState.mejaList.length} total meja',
-                  style: TextStyle(color: Colors.grey[600], fontSize: 13),
+                Row(
+                  children: [
+                    const Icon(Icons.circle, size: 10, color: Color(0xFF2E7D32)),
+                    const SizedBox(width: 4),
+                    const Text('Tersedia', style: TextStyle(fontSize: 12)),
+                    const SizedBox(width: 12),
+                    const Icon(Icons.circle, size: 10, color: Color(0xFF1565C0)),
+                    const SizedBox(width: 4),
+                    const Text('Aktif', style: TextStyle(fontSize: 12)),
+                    const SizedBox(width: 12),
+                    const Icon(Icons.circle, size: 10, color: Color(0xFFE65100)),
+                    const SizedBox(width: 4),
+                    const Text('Tenggang', style: TextStyle(fontSize: 12)),
+                    const SizedBox(width: 12),
+                    const Icon(Icons.circle, size: 10, color: Color(0xFFC62828)),
+                    const SizedBox(width: 4),
+                    const Text('Habis', style: TextStyle(fontSize: 12)),
+                  ],
                 ),
               ],
             ),
             const SizedBox(height: 16),
 
-            // Responsive Grid Kartu Meja
+            // Grid Cards Status Meja
             if (dashboardState.isLoading)
               const Padding(
-                padding: EdgeInsets.all(40.0),
+                padding: EdgeInsets.all(48.0),
                 child: Center(child: CircularProgressIndicator()),
               )
             else if (dashboardState.mejaList.isEmpty)
               Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(36.0),
+                  padding: const EdgeInsets.all(32.0),
                   child: Center(
                     child: Column(
                       children: [
-                        Icon(Icons.table_restaurant_outlined, size: 48, color: Colors.grey[400]),
+                        Icon(Icons.table_bar_outlined, size: 48, color: Colors.grey[400]),
                         const SizedBox(height: 12),
-                        const Text(
+                        Text(
                           'Belum Ada Meja Terdaftar',
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          style: theme.textTheme.titleMedium,
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Tambahkan meja di menu Manajemen Meja untuk memulai operasional.',
+                          'Tambahkan meja pada menu Manajemen Meja untuk mulai beroperasi.',
                           style: TextStyle(color: Colors.grey[600], fontSize: 13),
                         ),
                       ],
@@ -185,13 +227,13 @@ class DashboardPage extends ConsumerWidget {
             else
               LayoutBuilder(
                 builder: (context, constraints) {
-                  final crossAxisCount = constraints.maxWidth > 1100 ? 4 : (constraints.maxWidth > 750 ? 3 : (constraints.maxWidth > 500 ? 2 : 1));
+                  final crossAxisCount = constraints.maxWidth > 1200 ? 4 : (constraints.maxWidth > 850 ? 3 : (constraints.maxWidth > 550 ? 2 : 1));
                   return GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: crossAxisCount,
                       crossAxisSpacing: 16,
                       mainAxisSpacing: 16,
-                      childAspectRatio: 1.45,
+                      childAspectRatio: 1.18,
                     ),
                     itemCount: dashboardState.mejaList.length,
                     shrinkWrap: true,
@@ -282,7 +324,7 @@ class _KpiCard extends StatelessWidget {
   }
 }
 
-class _MejaCard extends StatelessWidget {
+class _MejaCard extends ConsumerWidget {
   final MejaModel meja;
   final SesiMejaModel? sesi;
   final DateTime now;
@@ -293,10 +335,58 @@ class _MejaCard extends StatelessWidget {
     required this.now,
   });
 
+  Future<void> _confirmSelesaikanSesi(BuildContext context, WidgetRef ref) async {
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: [
+            const Icon(Icons.check_circle_outline_rounded, color: Colors.redAccent),
+            const SizedBox(width: 8),
+            Text('Selesaikan Sesi Meja ${meja.nomorMeja}?'),
+          ],
+        ),
+        content: Text(
+          'Tindakan ini akan mengosongkan meja dan mengubah status meja kembali menjadi "Tersedia". Akumulasi sesi ini adalah ${sesi != null ? CurrencyFormatter.formatRupiah(sesi!.totalBelanja) : "Rp0"}.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Batal'),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.red[700]),
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Ya, Selesaikan Sesi'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm == true && sesi != null && context.mounted) {
+      final success = await ref
+          .read(dashboardNotifierProvider.notifier)
+          .selesaikanSesi(meja.idMeja, sesi!.idSesiMeja);
+
+      if (context.mounted) {
+        if (success) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Sesi Meja ${meja.nomorMeja} berhasil diselesaikan. Meja kini tersedia!')),
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Gagal menyelesaikan sesi. Silakan coba lagi.')),
+          );
+        }
+      }
+    }
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final statusVisual = sesi?.getStatusVisual(meja.statusAktif, meja.statusMeja) ?? 
+    final statusVisual = sesi?.getStatusVisual(meja.statusAktif, meja.statusMeja) ??
         (!meja.statusAktif ? StatusVisualMeja.nonaktif : StatusVisualMeja.tersedia);
 
     final visualConfig = _getVisualConfig(statusVisual);
@@ -341,7 +431,7 @@ class _MejaCard extends StatelessWidget {
               left: BorderSide(color: visualConfig.accentColor, width: 6),
             ),
           ),
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -378,9 +468,9 @@ class _MejaCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 6),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: visualConfig.accentColor,
                       borderRadius: BorderRadius.circular(8),
@@ -388,13 +478,13 @@ class _MejaCard extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(visualConfig.icon, size: 13, color: Colors.white),
+                        Icon(visualConfig.icon, size: 12, color: Colors.white),
                         const SizedBox(width: 4),
                         Text(
                           visualConfig.label,
                           style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 11,
+                            fontSize: 10,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -404,40 +494,37 @@ class _MejaCard extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: 6),
-
               // Sisa Waktu Countdown
               Row(
                 children: [
-                  Icon(Icons.timer_outlined, size: 18, color: visualConfig.accentColor),
-                  const SizedBox(width: 8),
-                  Text(
-                    statusVisual == StatusVisualMeja.tersedia
-                        ? 'Meja Tersedia'
-                        : (statusVisual == StatusVisualMeja.nonaktif ? 'Meja Nonaktif' : sisaWaktuText),
-                    style: TextStyle(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 15,
-                      color: statusVisual == StatusVisualMeja.tersedia
-                          ? theme.colorScheme.onSurface
-                          : visualConfig.accentColor,
+                  Icon(Icons.timer_outlined, size: 16, color: visualConfig.accentColor),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      statusVisual == StatusVisualMeja.tersedia
+                          ? 'Meja Tersedia'
+                          : (statusVisual == StatusVisualMeja.nonaktif ? 'Meja Nonaktif' : sisaWaktuText),
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 14,
+                        color: statusVisual == StatusVisualMeja.tersedia
+                            ? theme.colorScheme.onSurface
+                            : visualConfig.accentColor,
+                      ),
                     ),
                   ),
                 ],
               ),
 
-              const SizedBox(height: 6),
-              Divider(height: 1, color: theme.colorScheme.outline.withValues(alpha: 0.3)),
-              const SizedBox(height: 6),
-
-              // Footer Details: Jam Mulai & Total Belanja (Rp)
+              // Jam Mulai & Total Belanja
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Mulai: $jamMulaiText',
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: FontWeight.w500,
                       color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                     ),
@@ -445,9 +532,111 @@ class _MejaCard extends StatelessWidget {
                   Text(
                     totalBelanjaText,
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: 12,
                       fontWeight: FontWeight.w800,
                       color: theme.colorScheme.primary,
+                    ),
+                  ),
+                ],
+              ),
+
+              Divider(height: 1, color: theme.colorScheme.outline.withValues(alpha: 0.3)),
+
+              // Action Buttons Row (Selesaikan Sesi / Order Tambahan / Lihat QR)
+              Row(
+                children: [
+                  if (sesi != null) ...[
+                    // Button Selesaikan Sesi (Tutup Meja)
+                    Expanded(
+                      flex: 4,
+                      child: Tooltip(
+                        message: 'Selesaikan sesi meja & bebaskan meja',
+                        child: OutlinedButton.icon(
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: Colors.red[700],
+                            side: BorderSide(color: Colors.red[300]!),
+                            padding: EdgeInsets.zero,
+                            minimumSize: const Size(0, 32),
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: () => _confirmSelesaikanSesi(context, ref),
+                          icon: const Icon(Icons.check_circle_outline_rounded, size: 14),
+                          label: const Text('Selesaikan', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    // Button Order Tambahan (Perpanjang Sesi)
+                    Expanded(
+                      flex: 4,
+                      child: Tooltip(
+                        message: 'Tambah pesanan & perpanjang waktu',
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: theme.colorScheme.primary,
+                            padding: EdgeInsets.zero,
+                            minimumSize: const Size(0, 32),
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => BuatPesananModal(selectedMeja: meja),
+                            );
+                          },
+                          icon: const Icon(Icons.add_rounded, size: 14),
+                          label: const Text('+ Order', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                    ),
+                  ] else ...[
+                    // Button Buat Sesi Baru (Saat Meja Tersedia)
+                    Expanded(
+                      flex: 8,
+                      child: ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF2E7D32), // Emerald Green
+                          padding: EdgeInsets.zero,
+                          minimumSize: const Size(0, 32),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        ),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => BuatPesananModal(selectedMeja: meja),
+                          );
+                        },
+                        icon: const Icon(Icons.play_arrow_rounded, size: 14),
+                        label: const Text('Buat Pesanan Baru', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                  const SizedBox(width: 6),
+
+                  // Button QR Code Modal
+                  Tooltip(
+                    message: 'Lihat Kode QR Meja',
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(8),
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => LihatQrMejaDialog(meja: meja),
+                        );
+                      },
+                      child: Container(
+                        height: 32,
+                        width: 32,
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.surfaceContainerHighest,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.3)),
+                        ),
+                        child: Icon(Icons.qr_code_2_rounded, size: 16, color: theme.colorScheme.onSurface),
+                      ),
                     ),
                   ),
                 ],

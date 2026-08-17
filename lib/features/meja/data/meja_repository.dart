@@ -48,7 +48,8 @@ class MejaRepository {
     required int kapasitas,
     int urutanTampilan = 0,
   }) async {
-    final qrToken = 'CAF-$idKafe-${nomorMeja.toUpperCase()}-${DateTime.now().millisecondsSinceEpoch}';
+    final randHex = (DateTime.now().microsecondsSinceEpoch ^ 0x5F359ABC).toRadixString(16);
+    final qrToken = 'CFQR-$randHex-${nomorMeja.toUpperCase()}';
 
     final data = {
       'id_kafe': idKafe,
@@ -79,7 +80,6 @@ class MejaRepository {
           'nama_meja': meja.namaMeja?.trim(),
           'kapasitas': meja.kapasitas,
           'urutan_tampilan': meja.urutanTampilan,
-          'status_meja': meja.statusMeja,
           'status_aktif': meja.statusAktif,
         })
         .eq('id_meja', meja.idMeja)
@@ -99,15 +99,45 @@ class MejaRepository {
         .eq('id_kafe', idKafe);
   }
 
-  /// Regenerate token QR Code aman
+  /// Regenerasi / Reset Token Kode QR Meja Acak Baru
   Future<String> regenerateKodeQr(String idMeja, String idKafe, String nomorMeja) async {
-    final newToken = 'CAF-$idKafe-${nomorMeja.toUpperCase()}-${DateTime.now().millisecondsSinceEpoch}';
+    final randHex = (DateTime.now().microsecondsSinceEpoch ^ 0x3F2A7B9C).toRadixString(16);
+    final newToken = 'CFQR-$randHex-${nomorMeja.toUpperCase()}';
+
     await _supabase
         .from('data_meja')
         .update({'kode_qr': newToken})
         .eq('id_meja', idMeja)
         .eq('id_kafe', idKafe);
+
     return newToken;
+  }
+
+  /// Selesaikan Sesi Meja & Reset Status Meja ke 'tersedia'
+  Future<void> selesaikanSesiMeja({
+    required String idKafe,
+    required String idMeja,
+    required String idSesiMeja,
+  }) async {
+    final nowIso = DateTime.now().toIso8601String();
+
+    await _supabase
+        .from('data_sesi_meja')
+        .update({
+          'status_sesi': 'selesai',
+          'diubah_pada': nowIso,
+        })
+        .eq('id_sesi_meja', idSesiMeja)
+        .eq('id_kafe', idKafe);
+
+    await _supabase
+        .from('data_meja')
+        .update({
+          'status_meja': 'tersedia',
+          'diubah_pada': nowIso,
+        })
+        .eq('id_meja', idMeja)
+        .eq('id_kafe', idKafe);
   }
 
   /// Supabase Realtime Stream data_meja

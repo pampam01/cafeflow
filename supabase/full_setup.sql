@@ -674,3 +674,119 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
+-- ====================================================================
+-- FUNGSI AMAN PUBLIK: get_public_meja_status
+-- Mengakses data status meja & sesi aktif secara aman tanpa login
+-- HANYA mengembalikan data publik aman tanpa mengekspos data internal/pegawai/transaksi
+-- ====================================================================
+CREATE OR REPLACE FUNCTION public.get_public_meja_status(p_kode_qr TEXT)
+RETURNS JSONB AS $$
+DECLARE
+    v_meja RECORD;
+    v_kafe RECORD;
+    v_sesi RECORD;
+    v_total_meja INT := 0;
+    v_meja_terisi INT := 0;
+    v_rasio_okupansi NUMERIC := 0;
+    v_tingkat_keramaian TEXT := 'normal';
+    v_sisa_menit INT := 0;
+    v_pesan_customer TEXT := NULL;
+    v_now TIMESTAMPTZ := NOW();
+BEGIN
+    -- 1. Cari meja berdasarkan kode_qr
+    SELECT id_meja, id_kafe, nomor_meja, nama_meja, status_meja, status_aktif
+    INTO v_meja
+    FROM data_meja
+    WHERE kode_qr = p_kode_qr AND status_aktif = TRUE;
+
+    IF v_meja.id_meja IS NULL THEN
+        RETURN jsonb_build_object(
+            'valid', FALSE,
+            'pesan', 'QR Code meja tidak valid atau meja telah dinonaktifkan.'
+        );
+    END IF;
+
+    -- 2. Ambil data kafe publik
+    SELECT nama_kafe INTO v_kafe FROM data_kafe WHERE id_kafe = v_meja.id_kafe;
+
+    -- 3. Hitung tingkat keramaian kafe dari rasio okupansi meja aktif
+    SELECT COUNT(*) INTO v_total_meja FROM data_meja WHERE id_kafe = v_meja.id_kafe AND status_aktif = TRUE;
+    SELECT COUNT(*) INTO v_meja_terisi FROM data_meja WHERE id_kafe = v_meja.id_kafe AND status_aktif = TRUE AND status_meja = 'terisi';
+
+    IF v_total_meja > 0 THEN
+        v_rasio_okupansi := (v_meja_terisi::NUMERIC / v_total_meja::NUMERIC) * 100;
+    END IF;
+
+    IF v_rasio_okupansi >= 75 THEN
+        v_tingkat_keramaian := 'ramai';
+    ELSIF v_rasio_okupansi >= 40 THEN
+        v_tingkat_keramaian := 'normal';
+    ELSE
+        v_tingkat_keramaian := 'sepi';
+    END IF;
+
+    -- 4. Cari sesi aktif untuk meja ini
+    SELECT id_sesi_meja, waktu_mulai, waktu_berakhir, total_belanja, status_sesi
+    INTO v_sesi
+    FROM data_sesi_meja
+    WHERE id_meja = v_meja.id_meja AND status_sesi = 'aktif'
+    ORDER BY dibuat_pada DESC
+    LIMIT 1;
+
+    -- 5. Jika ada sesi aktif, hitung sisa menit & pesan reminder ramah
+    IF v_sesi.id_sesi_meja IS NOT NULL THEN
+        v_sisa_menit := EXTRACT(EPOCH FROM (v_sesi.waktu_berakhir - v_now)) / 60;
+
+        IF v_sisa_menit <= 15 AND v_tingkat_keramaian IN ('ramai', 'normal') THEN
+            v_pesan_customer := 'Cafe sedang cukup ramai. Tambahkan pesanan jika ingin menikmati waktu lebih lama.';
+        END IF;
+
+        RETURN jsonb_build_object(
+            'valid', TRUE,
+            'nama_kafe', v_kafe.nama_kafe,
+            'nomor_meja', v_meja.nomor_meja,
+            'nama_meja', v_meja.nama_meja,
+            'status_meja', v_meja.status_meja,
+            'ada_sesi_aktif', TRUE,
+            'waktu_mulai', v_sesi.waktu_mulai,
+            'waktu_berakhir', v_sesi.waktu_berakhir,
+            'total_belanja', COALESCE(v_sesi.total_belanja, 0.00),
+            'tingkat_keramaian', v_tingkat_keramaian,
+            'pesan_customer', v_pesan_customer
+        );
+    ELSE
+        RETURN jsonb_build_object(
+            'valid', TRUE,
+            'nama_kafe', v_kafe.nama_kafe,
+            'nomor_meja', v_meja.nomor_meja,
+            'nama_meja', v_meja.nama_meja,
+            'status_meja', v_meja.status_meja,
+            'ada_sesi_aktif', FALSE,
+            'waktu_mulai', NULL,
+            'waktu_berakhir', NULL,
+            'total_belanja', 0.00,
+            'tingkat_keramaian', v_tingkat_keramaian,
+            'pesan_customer', 'Meja ini belum memiliki sesi aktif.'
+        );
+    END IF;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Berikan izin EXECUTE ke role publik anon dan authenticated
+GRANT EXECUTE ON FUNCTION public.get_public_meja_status(TEXT) TO anon, authenticated;
+
+-- ====================================================================
+-- EKSIBIT SUPABASE REALTIME (PUBLICATION)
+-- Mengaktifkan pengiriman data otomatis via WebSocket tanpa polling
+-- ====================================================================
+DO $$
+BEGIN
+    IF EXISTS (SELECT 1 FROM pg_publication WHERE pubname = 'supabase_realtime') THEN
+        ALTER PUBLICATION supabase_realtime ADD TABLE data_meja, data_sesi_meja, data_pesanan;
+    END IF;
+EXCEPTION
+    WHEN duplicate_object THEN NULL;
+END $$;
+
+
+

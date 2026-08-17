@@ -16,6 +16,7 @@ import '../../features/pesanan/presentation/pesanan_page.dart';
 import '../../features/pelanggan/presentation/pelanggan_page.dart';
 import '../../features/analitik/presentation/analitik_page.dart';
 import '../../features/pengaturan/presentation/pengaturan_page.dart';
+import '../../features/customer/presentation/customer_meja_page.dart';
 
 class RouterNotifier extends ChangeNotifier {
   final Ref _ref;
@@ -31,6 +32,12 @@ class RouterNotifier extends ChangeNotifier {
 
     final isLoggingIn = state.uri.toString() == '/login';
     final isSelectingCafe = state.uri.toString() == '/pilih-kafe';
+
+    final path = state.uri.path;
+    final isPublicCustomerPage = path == '/m' || path.startsWith('/m/') || path.startsWith('/meja-publik/') || (path.startsWith('/meja/') && path != '/meja');
+    if (isPublicCustomerPage) {
+      return null; // Public customer route, bypass authentication completely
+    }
 
     // 1. Jika belum login -> Arahkan ke /login jika mencoba mengakses route terproteksi
     if (!authState.isAuthenticated) {
@@ -70,6 +77,34 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/pilih-kafe',
         builder: (context, state) => const PilihKafePage(),
+      ),
+      GoRoute(
+        path: '/m',
+        builder: (context, state) {
+          final token = state.uri.queryParameters['t'] ?? state.uri.queryParameters['token'] ?? '';
+          return CustomerMejaPage(tokenQr: token);
+        },
+      ),
+      GoRoute(
+        path: '/m/:token_qr',
+        builder: (context, state) {
+          final token = state.pathParameters['token_qr'] ?? '';
+          return CustomerMejaPage(tokenQr: token);
+        },
+      ),
+      GoRoute(
+        path: '/meja-publik/:token_qr',
+        builder: (context, state) {
+          final token = state.pathParameters['token_qr'] ?? '';
+          return CustomerMejaPage(tokenQr: token);
+        },
+      ),
+      GoRoute(
+        path: '/meja/:token_qr',
+        builder: (context, state) {
+          final token = state.pathParameters['token_qr'] ?? '';
+          return CustomerMejaPage(tokenQr: token);
+        },
       ),
       ShellRoute(
         builder: (context, state, child) {

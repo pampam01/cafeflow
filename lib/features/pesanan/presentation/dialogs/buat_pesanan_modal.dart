@@ -9,11 +9,31 @@ import '../../../meja/domain/meja_model.dart';
 import '../../../kafe/presentation/active_cafe_provider.dart';
 import '../../../../core/utils/currency_formatter.dart';
 
-class BuatPesananModal extends ConsumerWidget {
-  const BuatPesananModal({super.key});
+class BuatPesananModal extends ConsumerStatefulWidget {
+  final MejaModel? selectedMeja;
+
+  const BuatPesananModal({
+    super.key,
+    this.selectedMeja,
+  });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<BuatPesananModal> createState() => _BuatPesananModalState();
+}
+
+class _BuatPesananModalState extends ConsumerState<BuatPesananModal> {
+  @override
+  void initState() {
+    super.initState();
+    if (widget.selectedMeja != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ref.read(posCartProvider.notifier).selectMeja(widget.selectedMeja!);
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final produkState = ref.watch(produkNotifierProvider);
     final mejaState = ref.watch(mejaListProvider);

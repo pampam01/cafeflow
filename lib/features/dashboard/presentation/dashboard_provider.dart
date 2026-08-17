@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../meja/domain/meja_model.dart';
 import '../../meja/data/meja_repository.dart';
@@ -62,26 +63,27 @@ class DashboardNotifier extends StateNotifier<DashboardState> {
   StreamSubscription? _sesiSubscription;
 
   DashboardNotifier(this._repository, this._ref) : super(DashboardState(isLoading: true)) {
-    _initDashboard();
+    // Mendengarkan perubahan kafe aktif (termasuk saat awal login/pilih kafe)
+    _ref.listen<ActiveCafeState>(activeCafeProvider, (_, next) {
+      if (next.activeCafe != null) {
+        refreshData(next.activeCafe!.idKafe);
+        _setupRealtimeSubscriptions(next.activeCafe!.idKafe);
+      }
+    }, fireImmediately: true);
+
     // Local ticker updating currentTime every 1 second (no DB hits)
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       state = state.copyWith(currentTime: DateTime.now());
     });
   }
 
-  Future<void> _initDashboard() async {
-    final activeCafe = _ref.read(activeCafeProvider).activeCafe;
-    if (activeCafe == null) {
+  Future<void> refreshData([String? idKafeOverride]) async {
+    final idKafe = idKafeOverride ?? _ref.read(activeCafeProvider).activeCafe?.idKafe;
+    if (idKafe == null) {
       state = state.copyWith(isLoading: false);
       return;
     }
 
-    final idKafe = activeCafe.idKafe;
-    await refreshData(idKafe);
-    _setupRealtimeSubscriptions(idKafe);
-  }
-
-  Future<void> refreshData(String idKafe) async {
     state = state.copyWith(isLoading: true);
     try {
       final mejaList = await _repository.fetchMejaList(idKafe);
@@ -98,6 +100,7 @@ class DashboardNotifier extends StateNotifier<DashboardState> {
         isLoading: false,
       );
     } catch (e) {
+      debugPrint('Error refreshData Dashboard: $e');
       state = state.copyWith(isLoading: false);
     }
   }
@@ -107,10 +110,16 @@ class DashboardNotifier extends StateNotifier<DashboardState> {
     _sesiSubscription?.cancel();
 
     _mejaSubscription = _repository.streamMeja(idKafe).listen((data) async {
-      final updatedList = data.map((j) => MejaModel.fromJson(j)).toList();
-      state = state.copyWith(
-        mejaList: updatedList..sort((a, b) => a.urutanTampilan.compareTo(b.urutanTampilan)),
-      );
+      if (data.isNotEmpty) {
+        final updatedList = data.map((j) => MejaModel.fromJson(j)).toList();
+        state = state.copyWith(
+          mejaList: updatedList..sort((a, b) => a.urutanTampilan.compareTo(b.urutanTampilan)),
+        );
+      } else {
+        await refreshData(idKafe);
+      }
+    }, onError: (e) {
+      debugPrint('Realtime streamMeja error: $e');
     });
 
     _sesiSubscription = _repository.streamSesiMeja(idKafe).listen((data) async {
@@ -120,7 +129,27 @@ class DashboardNotifier extends StateNotifier<DashboardState> {
         map[s.idMeja] = s;
       }
       state = state.copyWith(activeSessionsByMejaId: map);
+    }, onError: (e) {
+      debugPrint('Realtime streamSesiMeja error: $e');
     });
+  }
+
+  Future<bool> selesaikanSesi(String idMeja, String idSesiMeja) async {
+    final activeCafe = _ref.read(activeCafeProvider).activeCafe;
+    if (activeCafe == null) return false;
+
+    try {
+      await _repository.selesaikanSesiMeja(
+        idKafe: activeCafe.idKafe,
+        idMeja: idMeja,
+        idSesiMeja: idSesiMeja,
+      );
+      await refreshData(activeCafe.idKafe);
+      return true;
+    } catch (e) {
+      debugPrint('Error selesaikanSesi: $e');
+      return false;
+    }
   }
 
   @override
